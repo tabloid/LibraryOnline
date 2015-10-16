@@ -9,8 +9,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <java.version>1.7</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
         <start-class>GVA.LibraryOnline.WebApplication</start-class>
     </properties>
 
@@ -51,7 +50,7 @@
 
     <build>
         <finalName>${project.artifactId}_${project.version}</finalName>
-        <outputDirectory>${outputFolder}/WEB-INF/classes</outputDirectory>
+        <!--<outputDirectory>${outputFolder}/WEB-INF/classes</outputDirectory>-->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
