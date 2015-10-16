@@ -1,1 +1,1 @@
-web: mvn spring-boot:run
+web: java -jar target/LibraryOnline_1.0.jar
