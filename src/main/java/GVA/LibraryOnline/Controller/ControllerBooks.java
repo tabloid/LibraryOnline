@@ -41,6 +41,10 @@ public class ControllerBooks {
             return serviceBooks.getBooksByAuthorAndYear(author, year);
         else if (feature == null && name == null && author == null && year != null)
             return serviceBooks.getBooksByYear(year);
+        else if (feature == null && name != null && author == null && year == null)
+            return serviceBooks.getBooksByName(name);
+        else if (feature == null && name == null && author != null && year == null)
+            return serviceBooks.getBooksByAuthor(author);
         return null;
     }
 

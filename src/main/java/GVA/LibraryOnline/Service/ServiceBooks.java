@@ -1,6 +1,8 @@
 package GVA.LibraryOnline.Service;
 
+import GVA.LibraryOnline.Dao.DaoBook;
 import GVA.LibraryOnline.Entity.EntityBook;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,19 +13,8 @@ import java.util.List;
  */
 @Service
 public class ServiceBooks {
-
-    private void initList(){
-        List<EntityBook> list = new ArrayList<>();
-        EntityBook book1 = new EntityBook();
-        book1.setAuthor("Уоллс Крейг");
-        book1.setName("Spring в действии");
-        book1.setFeature("it");
-        book1.setYear("2013");
-        book1.setData(new byte[]{1, 2, 3, 4});
-        EntityBook book2 = new EntityBook();
-        list.add(book1);
-        list.add(book2);
-    }
+    @Autowired
+    DaoBook daoBook;
 
     public List<EntityBook> getAllBooks(){
         List<EntityBook> list = new ArrayList<>();
@@ -33,13 +24,6 @@ public class ServiceBooks {
         return list;
     }
 
-    public List<EntityBook> getBooksByFeature(String feature){
-        List<EntityBook> list = new ArrayList<>();
-        EntityBook book = new EntityBook();
-        book.setName(feature);
-        list.add(book);
-        return list;
-    }
 
     public List<EntityBook> getBooksByFeatureAndName(String feature, String name){
         List<EntityBook> list = new ArrayList<>();
@@ -81,11 +65,19 @@ public class ServiceBooks {
         return list;
     }
 
+    public List<EntityBook> getBooksByFeature(String feature){
+        return daoBook.getListByOneParam(feature);
+    }
+
     public List<EntityBook> getBooksByYear(String year){
-        List<EntityBook> list = new ArrayList<>();
-        EntityBook book = new EntityBook();
-        book.setName(year);
-        list.add(book);
-        return list;
+        return daoBook.getListByOneParam(year);
+    }
+
+    public List<EntityBook> getBooksByName(String name){
+        return daoBook.getListByOneParam(name);
+    }
+
+    public List<EntityBook> getBooksByAuthor(String author){
+        return daoBook.getListByOneParam(author);
     }
 }
