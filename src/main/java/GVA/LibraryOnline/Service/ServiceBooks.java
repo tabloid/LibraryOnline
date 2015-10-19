@@ -66,18 +66,18 @@ public class ServiceBooks {
     }
 
     public List<EntityBook> getBooksByFeature(String feature){
-        return daoBook.getListByOneParam(feature);
+        return daoBook.getListByOneParam("feature", feature);
     }
 
     public List<EntityBook> getBooksByYear(String year){
-        return daoBook.getListByOneParam(year);
+        return daoBook.getListByOneParam("year", year);
     }
 
     public List<EntityBook> getBooksByName(String name){
-        return daoBook.getListByOneParam(name);
+        return daoBook.getListByOneParam("name", name);
     }
 
     public List<EntityBook> getBooksByAuthor(String author){
-        return daoBook.getListByOneParam(author);
+        return daoBook.getListByOneParam("author", author);
     }
 }

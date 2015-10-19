@@ -1,9 +1,7 @@
 package GVA.LibraryOnline.Entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by V.Herasymenko on 13.10.2015.
@@ -11,7 +9,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "books")
 public class EntityBook {
-    @Column(name = "id")
+    @Id
+    @GeneratedValue
     private int id;
     @Column(name = "feature")
     private String feature;

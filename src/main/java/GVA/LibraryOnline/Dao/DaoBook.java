@@ -12,13 +12,12 @@ import java.util.List;
  */
 @Repository
 public class DaoBook {
-    private String tableName = "books";
 
     @PersistenceContext
     protected EntityManager entityManager;
 
-    public List<EntityBook> getListByOneParam(String param){
-        String query = "select from " + tableName + " where " + param + " = " + param;
+    public List<EntityBook> getListByOneParam(String param, String value){
+        String query = "select table from EntityBook table where table." + param + " = '" + value + "'";
         List<EntityBook> list = entityManager.createQuery(query).getResultList();
         return list;
     }
