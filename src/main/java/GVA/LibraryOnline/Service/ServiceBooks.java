@@ -38,7 +38,7 @@ public class ServiceBooks {
         query.delete(query.length()-4, query.length());
         String str = null;
         try{
-            str = new String(query.toString().getBytes(), "UTF-8");
+            str = new String(query.toString().getBytes("UTF-8"));
         } catch (UnsupportedEncodingException ex){
             System.out.println(ex);
         }
