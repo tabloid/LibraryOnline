@@ -4,7 +4,9 @@ import GVA.LibraryOnline.Dao.DaoBook;
 import GVA.LibraryOnline.Entity.EntityBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +40,21 @@ public class ServiceBooks {
         }
         query.delete(query.length()-4, query.length());
         return daoBook.getListByCriteria(query.toString());
+    }
+
+    public void addNewBook(String fileName, String feature, byte[] bytes){
+        String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
+        String[] array = fileNameWithoutExtention.split("\\.");
+        String author = array[0].trim();
+        String name = array[1].trim();
+        String year = array[2].trim();
+        EntityBook entityBook = new EntityBook();
+        entityBook.setFeature(feature);
+        entityBook.setName(name);
+        entityBook.setAuthor(author);
+        entityBook.setYear(year);
+        entityBook.setData(bytes);
+        daoBook.save(entityBook);
     }
 
 }

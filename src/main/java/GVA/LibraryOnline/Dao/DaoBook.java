@@ -24,4 +24,8 @@ public class DaoBook {
         return list;
     }
 
+    public void save(EntityBook entityBook){
+        entityManager.persist(entityBook);
+    }
+
 }

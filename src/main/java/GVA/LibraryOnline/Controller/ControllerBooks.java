@@ -3,10 +3,7 @@ package GVA.LibraryOnline.Controller;
 import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Service.ServiceBooks;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -36,18 +33,15 @@ public class ControllerBooks {
             return serviceBooks.getBooksByCriteria(feature, name, author, year);
     }
 
-    @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String handleFileUpload(@RequestParam("file") MultipartFile file) {
+    @RequestMapping(value = "/books/{feature}/new", method = RequestMethod.POST)
+    public String addNewBook(@PathVariable(value = "feature") String feature, @RequestParam("file") MultipartFile file) throws IOException{
         if (!file.isEmpty()) {
-            try {
-                byte[] bytes = file.getBytes();
-                String name = file.getOriginalFilename();
-                return "You successfully uploaded " + name + "!";
-            } catch (IOException ex) {
-                System.out.println(ex);
-            }
+            String fileName = file.getOriginalFilename();
+            byte[] bytes = file.getBytes();
+            serviceBooks.addNewBook(fileName, feature, bytes);
+                return "OK";
         }
-        return "You failed to upload file because it was empty.";
+        return "FAILED";
     }
 
 }
