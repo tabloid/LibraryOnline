@@ -18,19 +18,20 @@ public class ServiceBooks {
     DaoBook daoBook;
 
     public List<EntityBook> getAllBooks(){
-        return daoBook.getList();
+        String queryStr = "select table from EntityBook table";
+        return daoBook.getListByCriteria(queryStr);
     }
 
     public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year){
         StringBuilder query = new StringBuilder("select table from EntityBook table where ");
         if (feature != null) {
-            query.append("feature like '").append(feature).append("%' and ");
+            query.append("LOWER(feature) like '").append(feature.toLowerCase()).append("%' and ");
         }
         if (name != null) {
-            query.append("name like '").append(name).append("%' and ");
+            query.append("LOWER(name) like '").append(name.toLowerCase()).append("%' and ");
         }
         if (author != null) {
-            query.append("author like '").append(author).append("%' and ");
+            query.append("LOWER(author) like '").append(author.toLowerCase()).append("%' and ");
         }
         if (year != null) {
             query.append("year like '").append(year).append("%' and ");
