@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.List;
 
 /**
@@ -33,13 +36,25 @@ public class ControllerBooks {
             return serviceBooks.getBooksByCriteria(feature, name, author, year);
     }
 
+    @RequestMapping(value = "/books/{id}", method = RequestMethod.GET)
+    public void getBook(@PathVariable int id, HttpServletResponse response) throws IOException{
+        EntityBook entityBook = serviceBooks.getBookById(id);
+        if (entityBook != null){
+            response.setStatus(200);
+            OutputStream outputStream = response.getOutputStream();
+            outputStream.write(entityBook.getData());
+            outputStream.flush();
+            outputStream.close();
+        }
+    }
+
     @RequestMapping(value = "/books/{feature}/new", method = RequestMethod.POST)
-    public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile file) throws IOException{
+    public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile file) throws IOException {
         if (!file.isEmpty()) {
             String fileName = file.getOriginalFilename();
             byte[] bytes = file.getBytes();
             serviceBooks.addNewBook(fileName, feature, bytes);
-                return "OK";
+            return "OK";
         }
         return "FAILED";
     }

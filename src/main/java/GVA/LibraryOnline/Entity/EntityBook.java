@@ -26,6 +26,9 @@ public class EntityBook {
     @Column(name = "data")
     @JsonIgnore
     private byte[] data;
+    @Column(name = "extention")
+    @JsonIgnore
+    private String extention;
 
     public int getId() {
         return id;
@@ -73,5 +76,13 @@ public class EntityBook {
 
     public void setData(byte[] data) {
         this.data = data;
+    }
+
+    public String getExtention() {
+        return extention;
+    }
+
+    public void setExtention(String extention) {
+        this.extention = extention;
     }
 }

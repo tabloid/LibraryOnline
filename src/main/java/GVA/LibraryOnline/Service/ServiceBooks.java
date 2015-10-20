@@ -24,6 +24,15 @@ public class ServiceBooks {
         return daoBook.getListByCriteria(queryStr);
     }
 
+    public EntityBook getBookById(int id){
+        String queryStr = "select table from EntityBook table where id =";
+        queryStr+=id;
+        List<EntityBook> list = daoBook.getListByCriteria(queryStr);
+        if (!list.isEmpty())
+            return list.get(0);
+        return null;
+    }
+
     public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year){
         StringBuilder query = new StringBuilder("select table from EntityBook table where ");
         if (feature != null) {
@@ -43,6 +52,7 @@ public class ServiceBooks {
     }
 
     public void addNewBook(String fileName, String feature, byte[] bytes){
+        String extention = fileName.substring(fileName.lastIndexOf("."));
         String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
         String[] array = fileNameWithoutExtention.split("\\.");
         String author = array[0].trim();
@@ -54,6 +64,7 @@ public class ServiceBooks {
         entityBook.setAuthor(author);
         entityBook.setYear(year);
         entityBook.setData(bytes);
+        entityBook.setExtention(extention);
         daoBook.save(entityBook);
     }
 
