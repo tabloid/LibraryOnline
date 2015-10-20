@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "books")
 public class EntityBook {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column(name = "feature")
     private String feature;
