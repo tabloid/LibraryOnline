@@ -24,26 +24,19 @@ public class ServiceBooks {
     public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year){
         StringBuilder query = new StringBuilder("select table from EntityBook table where ");
         if (feature != null) {
-            query.append("feature = ").append(feature).append(" and ");
+            query.append("feature = '").append(feature).append("' and ");
         }
         if (name != null) {
-            query.append("name = ").append(name).append(" and ");
+            query.append("name = '").append(name).append("' and ");
         }
         if (author != null) {
-            query.append("author = ").append(author).append(" and ");
+            query.append("author = '").append(author).append("' and ");
         }
         if (year != null) {
-            query.append("year = ").append(year).append(" and ");
+            query.append("year = '").append(year).append("' and ");
         }
         query.delete(query.length()-4, query.length());
-        String str = null;
-        try{
-            str = new String(query.toString().getBytes("UTF-8"));
-        } catch (UnsupportedEncodingException ex){
-            System.out.println(ex);
-        }
-
-        return daoBook.getListByCriteria(str);
+        return daoBook.getListByCriteria(query.toString());
     }
 
 }
