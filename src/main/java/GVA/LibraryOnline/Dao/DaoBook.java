@@ -25,7 +25,7 @@ public class DaoBook {
     }
 
     public List<EntityBook> getListByOneParam(String param1, String value1){
-        String queryStr = "select table from EntityBook table where :param1 = ':value1'";
+        String queryStr = "select table from EntityBook table where table.:param1 = :value1";
         Query query = entityManager.createQuery(queryStr).
                 setParameter("param1", param1).
                 setParameter("value1", value1);
@@ -35,8 +35,8 @@ public class DaoBook {
 
     public List<EntityBook> getListByTwoParam(String param1, String value1, String param2, String value2){
         String queryStr = "select table from EntityBook table where " +
-                ":param1 = ':value1' and " +
-                ":param2 = ':value2'";
+                "table.:param1 = :value1 and " +
+                "table.:param2 = :value2";
         Query query = entityManager.createQuery(queryStr).
                 setParameter("param1", param1).
                 setParameter("value1", value1).
@@ -50,9 +50,9 @@ public class DaoBook {
                                                 String param2, String value2,
                                                 String param3, String value3){
         String queryStr = "select table from EntityBook table where " +
-                ":param1 = ':value1' and " +
-                ":param2 = ':value2' and " +
-                ":param3 = ':value3'";
+                "table.:param1 = :value1 and " +
+                "table.:param2 = :value2 and " +
+                "table.:param3 = :value3";
         Query query = entityManager.createQuery(queryStr).
                 setParameter("param1", param1).
                 setParameter("value1", value1).
@@ -69,10 +69,10 @@ public class DaoBook {
                                                 String param3, String value3,
                                                String param4, String value4){
         String queryStr = "select table from EntityBook table where " +
-                ":param1 = ':value1' and " +
-                ":param2 = ':value2' and " +
-                ":param3 = ':value3' and " +
-                ":param4 = ':value4'";
+                "table.:param1 = :value1 and " +
+                "table.:param2 = :value2 and " +
+                "table.:param3 = :value3 and " +
+                "table.:param4 = :value4";
         Query query = entityManager.createQuery(queryStr).
                 setParameter("param1", param1).
                 setParameter("value1", value1).
