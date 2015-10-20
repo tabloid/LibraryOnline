@@ -1,6 +1,8 @@
 package GVA.LibraryOnline.Entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 /**
@@ -22,6 +24,7 @@ public class EntityBook {
     @Column(name = "year")
     private String year;
     @Column(name = "data")
+    @JsonIgnore
     private byte[] data;
 
     public int getId() {
