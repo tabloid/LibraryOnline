@@ -34,7 +34,7 @@ public class ControllerBooks {
     }
 
     @RequestMapping(value = "/books/{feature}/new", method = RequestMethod.POST)
-    public String addNewBook(@PathVariable(value = "feature") String feature, @RequestParam("file") MultipartFile file) throws IOException{
+    public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile file) throws IOException{
         if (!file.isEmpty()) {
             String fileName = file.getOriginalFilename();
             byte[] bytes = file.getBytes();
