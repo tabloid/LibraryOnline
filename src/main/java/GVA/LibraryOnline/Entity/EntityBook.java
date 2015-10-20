@@ -10,7 +10,8 @@ import javax.persistence.*;
 @Table(name = "books")
 public class EntityBook {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
+    @SequenceGenerator(name = "users_seq_gen", sequenceName = "books_id_seq")
     private int id;
     @Column(name = "feature")
     private String feature;
