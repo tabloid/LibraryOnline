@@ -41,7 +41,7 @@ public class ControllerBooks {
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
-                String name = file.getName();
+                String name = file.getOriginalFilename();
                 return "You successfully uploaded " + name + "!";
             } catch (IOException ex) {
                 System.out.println(ex);
