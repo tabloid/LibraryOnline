@@ -24,16 +24,16 @@ public class ServiceBooks {
     public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year){
         StringBuilder query = new StringBuilder("select table from EntityBook table where ");
         if (feature != null) {
-            query.append("feature = '").append(feature).append("' and ");
+            query.append("feature like '").append(feature).append("%' and ");
         }
         if (name != null) {
-            query.append("name = '").append(name).append("' and ");
+            query.append("name like '").append(name).append("%' and ");
         }
         if (author != null) {
-            query.append("author = '").append(author).append("' and ");
+            query.append("author like '").append(author).append("%' and ");
         }
         if (year != null) {
-            query.append("year = '").append(year).append("' and ");
+            query.append("year like '").append(year).append("%' and ");
         }
         query.delete(query.length()-4, query.length());
         return daoBook.getListByCriteria(query.toString());
