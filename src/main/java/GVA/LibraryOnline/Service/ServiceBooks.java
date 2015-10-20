@@ -5,6 +5,7 @@ import GVA.LibraryOnline.Entity.EntityBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +36,14 @@ public class ServiceBooks {
             query.append("year = ").append(year).append(" and ");
         }
         query.delete(query.length()-4, query.length());
-        return daoBook.getListByCriteria(query.toString());
+        String str = null;
+        try{
+            str = new String(query.toString().getBytes(), "UTF-8");
+        } catch (UnsupportedEncodingException ex){
+            System.out.println(ex);
+        }
+
+        return daoBook.getListByCriteria(str);
     }
 
 }
