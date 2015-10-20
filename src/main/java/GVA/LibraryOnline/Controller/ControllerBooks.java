@@ -27,24 +27,41 @@ public class ControllerBooks {
                                   @RequestParam(value = "year", required = false) String year) {
         if (feature == null && name == null && author == null && year == null)
             return serviceBooks.getAllBooks();
-        else if (feature != null && name == null && author == null && year == null)
-            return serviceBooks.getBooksByFeature(feature);
-        else if (feature != null && name != null && author == null && year == null)
-            return serviceBooks.getBooksByFeatureAndName(feature, name);
-        else if (feature != null && name != null && author != null && year == null)
-            return serviceBooks.getBooksByFeatureAndNameAndAuthor(feature, name, author);
         else if (feature != null && name != null && author != null && year != null)
             return serviceBooks.getBooksByFeatureAndNameAndAuthorAndYear(feature, name, author, year);
-        else if (feature == null && name != null && author != null && year != null)
-            return serviceBooks.getBooksByNameAndAuthorAndYear(name, author, year);
-        else if (feature == null && name == null && author != null && year != null)
-            return serviceBooks.getBooksByAuthorAndYear(author, year);
-        else if (feature == null && name == null && author == null && year != null)
-            return serviceBooks.getBooksByYear(year);
+
+        else if (feature != null && name == null && author == null && year == null)
+            return serviceBooks.getBooksByFeature(feature);
         else if (feature == null && name != null && author == null && year == null)
             return serviceBooks.getBooksByName(name);
         else if (feature == null && name == null && author != null && year == null)
             return serviceBooks.getBooksByAuthor(author);
+        else if (feature == null && name == null && author == null && year != null)
+            return serviceBooks.getBooksByYear(year);
+
+
+        else if (feature != null && name != null && author == null && year == null)
+            return serviceBooks.getBooksByFeatureAndName(feature, name);
+        else if (feature != null && name == null && author != null && year == null)
+            return serviceBooks.getBooksByFeatureAndAuthor(feature, author);
+        else if (feature != null && name == null && author == null && year != null)
+            return serviceBooks.getBooksByFeatureAndYear(feature, year);
+        else if (feature == null && name != null && author != null && year == null)
+            return serviceBooks.getBooksByNameAndAuthor(name, author);
+        else if (feature == null && name != null && author == null && year != null)
+            return serviceBooks.getBooksByNameAndYear(name, year);
+        else if (feature == null && name == null && author != null && year != null)
+            return serviceBooks.getBooksByAuthorAndYear(author, year);
+
+        else if (feature != null && name != null && author != null && year == null)
+            return serviceBooks.getBooksByFeatureAndNameAndAuthor(feature, name, author);
+        else if (feature != null && name != null && author == null && year != null)
+            return serviceBooks.getBooksByFeatureAndNameAndYear(feature, name, year);
+        else if (feature != null && name == null && author != null && year != null)
+            return serviceBooks.getBooksByFeatureAndAuthorAndYear(feature, author, year);
+        else if (feature == null && name != null && author != null && year != null)
+            return serviceBooks.getBooksByNameAndAuthorAndYear(name, author, year);
+
         return null;
     }
 

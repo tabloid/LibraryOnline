@@ -17,60 +17,56 @@ public class ServiceBooks {
     DaoBook daoBook;
 
     public List<EntityBook> getAllBooks(){
-        List<EntityBook> list = new ArrayList<>();
-        EntityBook book = new EntityBook();
-        book.setName("all");
-        list.add(book);
-        return list;
-    }
-
-
-    public List<EntityBook> getBooksByFeatureAndName(String feature, String name){
-        List<EntityBook> list = new ArrayList<>();
-        EntityBook book = new EntityBook();
-        book.setName(feature+name);
-        list.add(book);
-        return list;
-    }
-
-    public List<EntityBook> getBooksByFeatureAndNameAndAuthor(String feature, String name, String author){
-        List<EntityBook> list = new ArrayList<>();
-        EntityBook book = new EntityBook();
-        book.setName(feature+name+author);
-        list.add(book);
-        return list;
+        return daoBook.getList();
     }
 
     public List<EntityBook> getBooksByFeatureAndNameAndAuthorAndYear(String feature, String name, String author, String year){
-        List<EntityBook> list = new ArrayList<>();
-        EntityBook book = new EntityBook();
-        book.setName(feature+name+author+year);
-        list.add(book);
-        return list;
+        return daoBook.getListByFourParam("feature", feature, "name", name,
+                "author", author, "year", year);
+    }
+
+    public List<EntityBook> getBooksByFeatureAndNameAndAuthor(String feature, String name, String author){
+        return daoBook.getListByThreeParam("feature", feature, "name", name, "author", author);
+    }
+
+    public List<EntityBook> getBooksByFeatureAndNameAndYear(String feature, String name, String year){
+        return daoBook.getListByThreeParam("feature", feature, "name", name, "year", year);
+    }
+
+    public List<EntityBook> getBooksByFeatureAndAuthorAndYear(String feature, String author, String year){
+        return daoBook.getListByThreeParam("feature", feature, "author", author, "year", year);
     }
 
     public List<EntityBook> getBooksByNameAndAuthorAndYear(String name, String author, String year){
-        List<EntityBook> list = new ArrayList<>();
-        EntityBook book = new EntityBook();
-        book.setName(name+author+year);
-        list.add(book);
-        return list;
+        return daoBook.getListByThreeParam("name", name, "author", author, "year", year);
+    }
+
+    public List<EntityBook> getBooksByFeatureAndName(String feature, String name){
+        return daoBook.getListByTwoParam("feature", feature, "name", name);
+    }
+
+    public List<EntityBook> getBooksByFeatureAndAuthor(String feature, String author){
+        return daoBook.getListByTwoParam("feature", feature, "author", author);
+    }
+
+    public List<EntityBook> getBooksByFeatureAndYear(String feature, String year){
+        return daoBook.getListByTwoParam("feature", feature, "year", year);
+    }
+
+    public List<EntityBook> getBooksByNameAndAuthor(String name, String author){
+        return daoBook.getListByTwoParam("name", name, "author", author);
+    }
+
+    public List<EntityBook> getBooksByNameAndYear(String name, String year){
+        return daoBook.getListByTwoParam("name", name, "year", year);
     }
 
     public List<EntityBook> getBooksByAuthorAndYear(String author, String year){
-        List<EntityBook> list = new ArrayList<>();
-        EntityBook book = new EntityBook();
-        book.setName(author+year);
-        list.add(book);
-        return list;
+        return daoBook.getListByTwoParam("author", author, "year", year);
     }
 
     public List<EntityBook> getBooksByFeature(String feature){
         return daoBook.getListByOneParam("feature", feature);
-    }
-
-    public List<EntityBook> getBooksByYear(String year){
-        return daoBook.getListByOneParam("year", year);
     }
 
     public List<EntityBook> getBooksByName(String name){
@@ -80,4 +76,10 @@ public class ServiceBooks {
     public List<EntityBook> getBooksByAuthor(String author){
         return daoBook.getListByOneParam("author", author);
     }
+
+    public List<EntityBook> getBooksByYear(String year){
+        return daoBook.getListByOneParam("year", year);
+    }
+
+
 }
