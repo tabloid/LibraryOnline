@@ -20,66 +20,22 @@ public class ServiceBooks {
         return daoBook.getList();
     }
 
-    public List<EntityBook> getBooksByFeatureAndNameAndAuthorAndYear(String feature, String name, String author, String year){
-        return daoBook.getListByFourParam("feature", feature, "name", name,
-                "author", author, "year", year);
+    public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year){
+        StringBuilder query = new StringBuilder("select table from EntityBook table where ");
+        if (feature != null) {
+            query.append("feature = ").append(feature).append(" and ");
+        }
+        if (name != null) {
+            query.append("name = ").append(name).append(" and ");
+        }
+        if (author != null) {
+            query.append("author = ").append(author).append(" and ");
+        }
+        if (year != null) {
+            query.append("year = ").append(year).append(" and ");
+        }
+        query.delete(query.length()-4, query.length());
+        return daoBook.getListByCriteria(query.toString());
     }
-
-    public List<EntityBook> getBooksByFeatureAndNameAndAuthor(String feature, String name, String author){
-        return daoBook.getListByThreeParam("feature", feature, "name", name, "author", author);
-    }
-
-    public List<EntityBook> getBooksByFeatureAndNameAndYear(String feature, String name, String year){
-        return daoBook.getListByThreeParam("feature", feature, "name", name, "year", year);
-    }
-
-    public List<EntityBook> getBooksByFeatureAndAuthorAndYear(String feature, String author, String year){
-        return daoBook.getListByThreeParam("feature", feature, "author", author, "year", year);
-    }
-
-    public List<EntityBook> getBooksByNameAndAuthorAndYear(String name, String author, String year){
-        return daoBook.getListByThreeParam("name", name, "author", author, "year", year);
-    }
-
-    public List<EntityBook> getBooksByFeatureAndName(String feature, String name){
-        return daoBook.getListByTwoParam("feature", feature, "name", name);
-    }
-
-    public List<EntityBook> getBooksByFeatureAndAuthor(String feature, String author){
-        return daoBook.getListByTwoParam("feature", feature, "author", author);
-    }
-
-    public List<EntityBook> getBooksByFeatureAndYear(String feature, String year){
-        return daoBook.getListByTwoParam("feature", feature, "year", year);
-    }
-
-    public List<EntityBook> getBooksByNameAndAuthor(String name, String author){
-        return daoBook.getListByTwoParam("name", name, "author", author);
-    }
-
-    public List<EntityBook> getBooksByNameAndYear(String name, String year){
-        return daoBook.getListByTwoParam("name", name, "year", year);
-    }
-
-    public List<EntityBook> getBooksByAuthorAndYear(String author, String year){
-        return daoBook.getListByTwoParam("author", author, "year", year);
-    }
-
-    public List<EntityBook> getBooksByFeature(String feature){
-        return daoBook.getListByOneParam("feature", feature);
-    }
-
-    public List<EntityBook> getBooksByName(String name){
-        return daoBook.getListByOneParam("name", name);
-    }
-
-    public List<EntityBook> getBooksByAuthor(String author){
-        return daoBook.getListByOneParam("author", author);
-    }
-
-    public List<EntityBook> getBooksByYear(String year){
-        return daoBook.getListByOneParam("year", year);
-    }
-
 
 }
