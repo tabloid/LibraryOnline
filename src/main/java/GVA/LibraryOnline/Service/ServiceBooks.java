@@ -48,8 +48,8 @@ public class ServiceBooks {
     }
 
     public void addNewBook(String fileName, String feature, byte[] bytes) throws WrongNameFormatException{
-        String extention = fileName.substring(fileName.lastIndexOf(".") + 1);
-        String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
+        String extention = fileName.substring(fileName.lastIndexOf("\\.") + 1);
+        String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("\\."));
         //split by dot symbol
         String[] array = fileNameWithoutExtention.split("\\.");
         int len = array.length;
