@@ -10,7 +10,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/v1/web/weblib/**").addResourceLocations(
+        registry.addResourceHandler("weblib/**").addResourceLocations(
                 "/WEB-INF/weblib/");
 //        registry.addResourceHandler("/api/**").addResourceLocations(
 //                "/${server.servlet-path}/api/**");
