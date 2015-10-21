@@ -12,8 +12,8 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/weblib/**").addResourceLocations(
                 "/WEB-INF/weblib/");
-        registry.addResourceHandler("/uibapi/**").addResourceLocations(
-                "/${server.servlet-path}/uibapi/**");
+        registry.addResourceHandler("/api/**").addResourceLocations(
+                "/${server.servlet-path}/api/**");
     }
 
 

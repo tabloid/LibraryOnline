@@ -58,6 +58,8 @@ public class ServiceBooks {
             String author = array[0].trim();
             //last element is year
             String year = array[len-1].trim();
+            //everything between first and last element is name value
+            //this is for book names that consist of several sentences divided by dot
             String name = "";
             if (len > 3){
                 for (int i = 1; i<= len - 2; i++)

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
@@ -19,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api")
-public class ControllerBooks {
+public class ControllerApiBooks {
 
     @Autowired
     ServiceBooks serviceBooks;
@@ -38,14 +37,14 @@ public class ControllerBooks {
     }
 
     @RequestMapping(value = "/books/{id}", method = RequestMethod.GET)
-    public void getBook(@PathVariable int id, HttpServletResponse response) throws IOException{
+    public void getBook(@PathVariable int id, HttpServletResponse response) throws IOException {
         EntityBook entityBook = serviceBooks.getBookById(id);
-        if (entityBook != null){
+        if (entityBook != null) {
             response.setStatus(200);
             String filename = entityBook.getId() + "." + entityBook.getExtention();
             String len = String.valueOf(entityBook.getData().length);
             response.addHeader("Content-Length", len);
-            response.addHeader("Content-Disposition","attachment; filename=\"" + filename + "\"");
+            response.addHeader("Content-Disposition", "attachment; filename=\"" + filename + "\"");
             OutputStream outputStream = response.getOutputStream();
             outputStream.write(entityBook.getData());
             outputStream.flush();
