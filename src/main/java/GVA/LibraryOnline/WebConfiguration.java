@@ -14,7 +14,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler(version + "web/weblib/**").addResourceLocations(
+        registry.addResourceHandler(version + "/web/weblib/**").addResourceLocations(
                 "/WEB-INF/weblib/");
     }
 
