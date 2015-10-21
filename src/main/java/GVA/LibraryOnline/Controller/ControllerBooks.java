@@ -41,6 +41,9 @@ public class ControllerBooks {
         EntityBook entityBook = serviceBooks.getBookById(id);
         if (entityBook != null){
             response.setStatus(200);
+            response.addHeader("Content-Length", String.valueOf(entityBook.getData().length));
+            response.addHeader("Content-Type","application/" + entityBook.getExtention());
+            response.addHeader("Connection","close");
             OutputStream outputStream = response.getOutputStream();
             outputStream.write(entityBook.getData());
             outputStream.flush();

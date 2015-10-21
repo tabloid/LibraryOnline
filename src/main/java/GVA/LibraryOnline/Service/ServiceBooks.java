@@ -36,23 +36,23 @@ public class ServiceBooks {
     public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year){
         StringBuilder query = new StringBuilder("select table from EntityBook table where ");
         if (feature != null) {
-            query.append("LOWER(feature) like '").append(feature.toLowerCase()).append("%' and ");
+            query.append("LOWER(feature) like '%").append(feature.toLowerCase()).append("%' and ");
         }
         if (name != null) {
-            query.append("LOWER(name) like '").append(name.toLowerCase()).append("%' and ");
+            query.append("LOWER(name) like '%").append(name.toLowerCase()).append("%' and ");
         }
         if (author != null) {
-            query.append("LOWER(author) like '").append(author.toLowerCase()).append("%' and ");
+            query.append("LOWER(author) like '%").append(author.toLowerCase()).append("%' and ");
         }
         if (year != null) {
-            query.append("year like '").append(year).append("%' and ");
+            query.append("year like '%").append(year).append("%' and ");
         }
         query.delete(query.length()-4, query.length());
         return daoBook.getListByCriteria(query.toString());
     }
 
     public void addNewBook(String fileName, String feature, byte[] bytes){
-        String extention = fileName.substring(fileName.lastIndexOf("."));
+        String extention = fileName.substring(fileName.lastIndexOf(".")+1);
         String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
         String[] array = fileNameWithoutExtention.split("\\.");
         String author = array[0].trim();
