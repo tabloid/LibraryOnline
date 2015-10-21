@@ -42,11 +42,7 @@ public class ControllerBooks {
         EntityBook entityBook = serviceBooks.getBookById(id);
         if (entityBook != null){
             response.setStatus(200);
-            String filename = entityBook.getAuthor() + ". " +
-                    entityBook.getFeature() + "." +
-                    entityBook.getName() + ". " +
-                    entityBook.getYear() + "." +
-                    entityBook.getExtention();
+            String filename = entityBook.getId() + "." + entityBook.getExtention();
             String len = String.valueOf(entityBook.getData().length);
             response.addHeader("Content-Length", len);
             response.addHeader("Content-Disposition","attachment; filename=\"" + filename + "\"");
