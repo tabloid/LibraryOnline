@@ -9,12 +9,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableAutoConfiguration
 public class WebConfiguration extends WebMvcConfigurerAdapter {
 
-    @Value("${server.servlet-path}")
-    private String version;
-
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler(version + "/web/weblib/**").addResourceLocations(
+        registry.addResourceHandler("/web/weblib/**").addResourceLocations(
                 "/WEB-INF/weblib/");
     }
 
