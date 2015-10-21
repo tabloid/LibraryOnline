@@ -1,6 +1,7 @@
 package GVA.LibraryOnline.Controller;
 
 import GVA.LibraryOnline.Entity.EntityBook;
+import GVA.LibraryOnline.Exception.WrongNameFormatException;
 import GVA.LibraryOnline.Service.ServiceBooks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -41,9 +42,13 @@ public class ControllerBooks {
         EntityBook entityBook = serviceBooks.getBookById(id);
         if (entityBook != null){
             response.setStatus(200);
+            String filename = entityBook.getAuthor() + "\\. " +
+                    entityBook.getName() + "\\. " +
+                    entityBook.getFeature() + "\\." +
+                    entityBook.getYear() + "\\." +
+                    entityBook.getExtention();
             response.addHeader("Content-Length", String.valueOf(entityBook.getData().length));
-            response.addHeader("Content-Type","application/" + entityBook.getExtention());
-            response.addHeader("Connection","close");
+            response.addHeader("Content-Disposition","attachment; filename=" + filename);
             OutputStream outputStream = response.getOutputStream();
             outputStream.write(entityBook.getData());
             outputStream.flush();
@@ -52,7 +57,7 @@ public class ControllerBooks {
     }
 
     @RequestMapping(value = "/books/{feature}/new", method = RequestMethod.POST)
-    public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile file) throws IOException {
+    public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile file) throws IOException, WrongNameFormatException {
         if (!file.isEmpty()) {
             String fileName = file.getOriginalFilename();
             byte[] bytes = file.getBytes();

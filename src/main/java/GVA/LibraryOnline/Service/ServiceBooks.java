@@ -2,6 +2,7 @@ package GVA.LibraryOnline.Service;
 
 import GVA.LibraryOnline.Dao.DaoBook;
 import GVA.LibraryOnline.Entity.EntityBook;
+import GVA.LibraryOnline.Exception.WrongNameFormatException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -25,12 +26,7 @@ public class ServiceBooks {
     }
 
     public EntityBook getBookById(int id){
-        String queryStr = "select table from EntityBook table where id =";
-        queryStr+=id;
-        List<EntityBook> list = daoBook.getListByCriteria(queryStr);
-        if (!list.isEmpty())
-            return list.get(0);
-        return null;
+        return daoBook.getBookById(id);
     }
 
     public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year){
@@ -51,21 +47,35 @@ public class ServiceBooks {
         return daoBook.getListByCriteria(query.toString());
     }
 
-    public void addNewBook(String fileName, String feature, byte[] bytes){
-        String extention = fileName.substring(fileName.lastIndexOf(".")+1);
+    public void addNewBook(String fileName, String feature, byte[] bytes) throws WrongNameFormatException{
+        String extention = fileName.substring(fileName.lastIndexOf(".") + 1);
         String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
+        //split by dot symbol
         String[] array = fileNameWithoutExtention.split("\\.");
-        String author = array[0].trim();
-        String name = array[1].trim();
-        String year = array[2].trim();
-        EntityBook entityBook = new EntityBook();
-        entityBook.setFeature(feature);
-        entityBook.setName(name);
-        entityBook.setAuthor(author);
-        entityBook.setYear(year);
-        entityBook.setData(bytes);
-        entityBook.setExtention(extention);
-        daoBook.save(entityBook);
-    }
+        int len = array.length;
+        if (len >= 3){
+            //first element is author name
+            String author = array[0].trim();
+            //last element is year
+            String year = array[len-1].trim();
+            String name = "";
+            if (len > 3){
+                for (int i = 1; i<= len - 2; i++)
+                     name += array[i] + ". ";
+                name = name.substring(0,name.lastIndexOf("\\."));
+            }
+            else
+                name = array[1].trim();
 
+            EntityBook entityBook = new EntityBook();
+            entityBook.setFeature(feature);
+            entityBook.setName(name);
+            entityBook.setAuthor(author);
+            entityBook.setYear(year);
+            entityBook.setData(bytes);
+            entityBook.setExtention(extention);
+            daoBook.save(entityBook);
+        }
+        else throw new WrongNameFormatException();
+    }
 }

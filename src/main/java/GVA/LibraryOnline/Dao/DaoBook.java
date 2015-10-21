@@ -26,6 +26,10 @@ public class DaoBook {
         return list;
     }
 
+    public EntityBook getBookById(int id){
+        return entityManager.find(EntityBook.class, id);
+    }
+
     public void save(EntityBook entityBook){
         entityManager.persist(entityBook);
     }
