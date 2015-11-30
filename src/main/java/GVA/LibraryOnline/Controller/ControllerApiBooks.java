@@ -3,6 +3,7 @@ package GVA.LibraryOnline.Controller;
 import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Exception.WrongNameFormatException;
 import GVA.LibraryOnline.Service.ServiceBooks;
+import com.itextpdf.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -53,7 +54,8 @@ public class ControllerApiBooks {
     }
 
     @RequestMapping(value = "/books/{feature}/new", method = RequestMethod.POST)
-    public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile file) throws IOException, WrongNameFormatException {
+    public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile file)
+            throws IOException, WrongNameFormatException, DocumentException {
         if (!file.isEmpty()) {
             String fileName = file.getOriginalFilename();
             byte[] bytes = file.getBytes();
