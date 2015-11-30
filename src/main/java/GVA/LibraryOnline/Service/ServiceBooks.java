@@ -3,6 +3,7 @@ package GVA.LibraryOnline.Service;
 import GVA.LibraryOnline.Dao.DaoBook;
 import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Exception.WrongNameFormatException;
+import com.itextpdf.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,6 +20,8 @@ import java.util.List;
 public class ServiceBooks {
     @Autowired
     DaoBook daoBook;
+    @Autowired
+    ServiceTitles serviceTitles;
 
     public List<EntityBook> getAllBooks(){
         String queryStr = "select table from EntityBook table";
@@ -47,7 +50,8 @@ public class ServiceBooks {
         return daoBook.getListByCriteria(query.toString());
     }
 
-    public void addNewBook(String fileName, String feature, byte[] bytes) throws WrongNameFormatException{
+    public void addNewBook(String fileName, String feature, byte[] bytes)
+            throws WrongNameFormatException, DocumentException, IOException{
         String extention = fileName.substring(fileName.lastIndexOf(".") + 1);
         String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
         //split by dot symbol
@@ -76,6 +80,8 @@ public class ServiceBooks {
             entityBook.setYear(year);
             entityBook.setData(bytes);
             entityBook.setExtention(extention);
+            byte[] title = serviceTitles.getFirstPage(bytes);
+            entityBook.setTitle(title);
             daoBook.save(entityBook);
         }
         else throw new WrongNameFormatException();
