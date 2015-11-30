@@ -56,7 +56,7 @@
         <dependency>
             <groupId>com.lowagie</groupId>
             <artifactId>itext</artifactId>
-            <version>4.2.1</version>
+            <version>4.2.2</version>
         </dependency>
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
@@ -77,11 +77,6 @@
 
 
     <repositories>
-        <repository>
-            <id>ApacheSnapshot</id>
-            <name>Apache Repository</name>
-            <url>https://repository.apache.org/content/groups/snapshots/</url>
-        </repository>
         <repository>
             <id>spring-releases</id>
             <url>https://repo.spring.io/libs-release</url>
