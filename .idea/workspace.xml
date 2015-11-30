@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337ff072-7491-4976-8ea2-2e63024859a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_6.xml" />
-      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_lowagie_itext_4_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__jfree_jcommon_1_0_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__jfree_jfreechart_1_0_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_bouncycastle_bcmail_jdk14_1_38.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_bouncycastle_bcprov_jdk14_1_38.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_bouncycastle_bctsp_jdk14_1_38.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_swinglabs_pdf_renderer_1_0_5.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Controller/ControllerApiBooks.java" afterPath="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Controller/ControllerApiBooks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project LibraryOnline.iml" afterPath="$PROJECT_DIR$/Project LibraryOnline.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceBooks.java" afterPath="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceBooks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceTitles.java" afterPath="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceTitles.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_fontbox_2_0_0_SNAPSHOT.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_pdfbox_2_0_0_SNAPSHOT.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -38,12 +29,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3067376">
-              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceTitles.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceTitles.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.05496454">
+              <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,8 +83,8 @@
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Entity/EntityBook.java" />
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Controller/ControllerApiBooks.java" />
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceBooks.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceTitles.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -422,12 +425,6 @@
       <option name="number" value="Default" />
       <updated>1444731523865</updated>
     </task>
-    <task id="LOCAL-00001" summary="atemp to connect to heroku db and first selects">
-      <created>1445266473538</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1445266473538</updated>
-    </task>
     <task id="LOCAL-00002" summary="changes">
       <created>1445267057821</created>
       <option name="number" value="00002" />
@@ -716,7 +713,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448894502293</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="hope working pdf parser)">
+      <created>1448895346265</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1448895346267</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -782,7 +785,8 @@
     <MESSAGE value="pdf title parser added" />
     <MESSAGE value="working pdf parser" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="hope working pdf parser)" />
+    <option name="LAST_COMMIT_MESSAGE" value="hope working pdf parser)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1196,21 +1200,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceTitles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2358156">
+        <state vertical-scroll-proportion="-0.05496454">
           <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3067376">
-          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
