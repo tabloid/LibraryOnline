@@ -3,7 +3,7 @@ package GVA.LibraryOnline.Controller;
 import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Exception.WrongNameFormatException;
 import GVA.LibraryOnline.Service.ServiceBooks;
-import com.itextpdf.text.DocumentException;
+import com.lowagie.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

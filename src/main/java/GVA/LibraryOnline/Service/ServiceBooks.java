@@ -3,14 +3,11 @@ package GVA.LibraryOnline.Service;
 import GVA.LibraryOnline.Dao.DaoBook;
 import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Exception.WrongNameFormatException;
-import com.itextpdf.text.DocumentException;
+import com.lowagie.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,16 +20,16 @@ public class ServiceBooks {
     @Autowired
     ServiceTitles serviceTitles;
 
-    public List<EntityBook> getAllBooks(){
+    public List<EntityBook> getAllBooks() {
         String queryStr = "select table from EntityBook table";
         return daoBook.getListByCriteria(queryStr);
     }
 
-    public EntityBook getBookById(int id){
+    public EntityBook getBookById(int id) {
         return daoBook.getBookById(id);
     }
 
-    public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year){
+    public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year) {
         StringBuilder query = new StringBuilder("select table from EntityBook table where ");
         if (feature != null) {
             query.append("LOWER(feature) like '%").append(feature.toLowerCase()).append("%' and ");
@@ -46,31 +43,30 @@ public class ServiceBooks {
         if (year != null) {
             query.append("year like '%").append(year).append("%' and ");
         }
-        query.delete(query.length()-4, query.length());
+        query.delete(query.length() - 4, query.length());
         return daoBook.getListByCriteria(query.toString());
     }
 
     public void addNewBook(String fileName, String feature, byte[] bytes)
-            throws WrongNameFormatException, DocumentException, IOException{
+            throws WrongNameFormatException, DocumentException, IOException {
         String extention = fileName.substring(fileName.lastIndexOf(".") + 1);
         String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
         //split by dot symbol
         String[] array = fileNameWithoutExtention.split("\\.");
         int len = array.length;
-        if (len >= 3){
+        if (len >= 3) {
             //first element is author name
             String author = array[0].trim();
             //last element is year
-            String year = array[len-1].trim();
+            String year = array[len - 1].trim();
             //everything between first and last element is name value
             //this is for book names that consist of several sentences divided by dot
             String name = "";
-            if (len > 3){
-                for (int i = 1; i<= len - 2; i++)
-                     name += array[i] + ". ";
-                name = name.substring(0,name.lastIndexOf("."));
-            }
-            else
+            if (len > 3) {
+                for (int i = 1; i <= len - 2; i++)
+                    name += array[i] + ". ";
+                name = name.substring(0, name.lastIndexOf("."));
+            } else
                 name = array[1].trim();
 
             EntityBook entityBook = new EntityBook();
@@ -83,7 +79,6 @@ public class ServiceBooks {
             byte[] title = serviceTitles.getFirstPage(bytes);
             entityBook.setTitle(title);
             daoBook.save(entityBook);
-        }
-        else throw new WrongNameFormatException();
+        } else throw new WrongNameFormatException();
     }
 }

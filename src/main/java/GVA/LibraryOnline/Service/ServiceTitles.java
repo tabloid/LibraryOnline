@@ -1,12 +1,10 @@
 package GVA.LibraryOnline.Service;
 
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Image;
-import com.itextpdf.text.PageSize;
-import com.itextpdf.text.pdf.PdfImportedPage;
-import com.itextpdf.text.pdf.PdfReader;
-import com.itextpdf.text.pdf.PdfWriter;
+
+import com.lowagie.text.*;
+import com.lowagie.text.pdf.PdfImportedPage;
+import com.lowagie.text.pdf.PdfReader;
+import com.lowagie.text.pdf.PdfWriter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
 import org.springframework.stereotype.Service;
@@ -40,7 +38,8 @@ public class ServiceTitles {
         document.open();
         PdfImportedPage page = writer.getImportedPage(reader, 1);
         Image image = Image.getInstance(page);
-        image.scaleToFit(document.getPageSize());
+        Rectangle rectangle = document.getPageSize();
+        image.scaleToFit(rectangle.getWidth(), rectangle.getHeight());
         document.add(image);
         document.close();
         byte[] output = byteArrayOutputStream.toByteArray();
@@ -63,7 +62,7 @@ public class ServiceTitles {
         return output;
     }
 
-    public byte[] getFirstPage(byte[] input)throws IOException, DocumentException{
+    public byte[] getFirstPage(byte[] input) throws IOException, DocumentException {
         return getFirstJPGPage(getFirstPdfPage(input));
     }
 
