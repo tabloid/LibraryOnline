@@ -78,16 +78,19 @@
 
     <repositories>
         <repository>
-            <id>spring-releases</id>
-            <url>https://repo.spring.io/libs-release</url>
-        </repository>
-        <repository>
             <id>ApacheSnapshot</id>
             <name>Apache Repository</name>
             <url>https://repository.apache.org/content/groups/snapshots/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
         </repository>
     </repositories>
 
