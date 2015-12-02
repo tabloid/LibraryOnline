@@ -2,41 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337ff072-7491-4976-8ea2-2e63024859a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_1_3_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_9_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_7_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_14.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__ch_qos_logback_logback_classic_1_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__ch_qos_logback_logback_core_1_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_fasterxml_classmate_1_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_core_2_4_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_databind_2_4_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_lowagie_itext_4_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__javax_servlet_jstl_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__javax_transaction_javax_transaction_api_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__jfree_jcommon_1_0_15.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__jfree_jfreechart_1_0_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_pdfbox_fontbox_2_0_0_RC1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_pdfbox_pdfbox_2_0_0_RC1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_core_8_0_28.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_el_8_0_28.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_jasper_8_0_28.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_28.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_28.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_tomcat_jdbc_8_0_28.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_tomcat_juli_8_0_28.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_aspectj_aspectjrt_1_8_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_aspectj_aspectjweaver_1_8_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_bouncycastle_bcmail_jdk14_1_38.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_bouncycastle_bcprov_jdk14_1_38.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_bouncycastle_bctsp_jdk14_1_38.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_eclipse_jdt_core_compiler_ecj_4_4_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_hibernate_common_hibernate_commons_annotations_4_0_5_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_hibernate_hibernate_core_4_3_11_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_hibernate_hibernate_entitymanager_4_3_11_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_hibernate_hibernate_validator_5_1_3_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_javassist_javassist_3_18_1_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_jboss_jandex_1_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_slf4j_jul_to_slf4j_1_7_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_slf4j_log4j_over_slf4j_1_7_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_1_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_autoconfigure_1_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_1_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_aop_1_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_jdbc_1_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_logging_1_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_tomcat_1_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_web_1_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_data_spring_data_commons_1_9_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_data_spring_data_jpa_1_7_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_aop_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_aspects_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_beans_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_context_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_core_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_expression_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_jdbc_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_orm_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_tx_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_web_4_1_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_webmvc_4_1_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_swinglabs_pdf_renderer_1_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_yaml_snakeyaml_1_14.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__postgresql_postgresql_9_1_901_jdbc4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\Command Prompt.lnk" afterPath="" />
     </list>
     <ignored path="Project LibraryOnline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -450,12 +495,6 @@
       <option name="number" value="Default" />
       <updated>1444731523865</updated>
     </task>
-    <task id="LOCAL-00017" summary="changes">
-      <created>1445345488779</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1445345488779</updated>
-    </task>
     <task id="LOCAL-00018" summary="changes">
       <created>1445345550958</created>
       <option name="number" value="00018" />
@@ -744,7 +783,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449068657068</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="ver spring boot 1.2.8 doesnt have cors libraries(&#10;exluded .idea">
+      <created>1449069437284</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1449069437284</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -788,7 +833,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changes like clause" />
     <MESSAGE value="upload post method" />
     <MESSAGE value="upload changes" />
     <MESSAGE value="upload" />
@@ -813,7 +857,8 @@
     <MESSAGE value="spring boot ver 1.2.7" />
     <MESSAGE value="working cors" />
     <MESSAGE value="working cors I hope)" />
-    <option name="LAST_COMMIT_MESSAGE" value="working cors I hope)" />
+    <MESSAGE value="ver spring boot 1.2.8 doesnt have cors libraries(&#10;exluded .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="ver spring boot 1.2.8 doesnt have cors libraries(&#10;exluded .idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1013,13 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project LibraryOnline.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1095,14 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3500931">
           <caret line="370" column="21" selection-start-line="370" selection-start-column="21" selection-end-line="370" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.35416666">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
