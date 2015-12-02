@@ -1,6 +1,7 @@
 package GVA.LibraryOnline;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
@@ -9,6 +10,7 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
  * Created by V.Herasymenko on 05.10.2015.
  */
 @SpringBootApplication
+@EnableAutoConfiguration
 public class WebApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
