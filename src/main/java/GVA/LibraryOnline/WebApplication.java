@@ -10,7 +10,6 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
  * Created by V.Herasymenko on 05.10.2015.
  */
 @SpringBootApplication
-@EnableAutoConfiguration
 public class WebApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
