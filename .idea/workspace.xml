@@ -1,55 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="337ff072-7491-4976-8ea2-2e63024859a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_fontbox_2_0_0_RC1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_pdfbox_2_0_0_RC1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_1_3_0_RELEASE.xml" />
-      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_aspectj_aspectjrt_1_8_6.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project LibraryOnline.iml" afterPath="$PROJECT_DIR$/Project LibraryOnline.iml" />
+    <list default="true" id="337ff072-7491-4976-8ea2-2e63024859a0" name="Default" comment="changes">
+      <change type="DELETED" beforePath="D:\java projects\Project LibraryOnline\src\main\java\GVA\LibraryOnline\CORSConfiguration.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_fasterxml_classmate_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_3.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_core_2_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_3.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_databind_2_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_3.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_core_8_0_26.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_0_28.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_el_8_0_26.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_0_28.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_jasper_8_0_26.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_jasper_8_0_28.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_26.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_28.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_26.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_28.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_tomcat_jdbc_8_0_26.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_0_28.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_apache_tomcat_tomcat_juli_8_0_26.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_0_28.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_aspectj_aspectjweaver_1_8_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_7.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_hibernate_hibernate_validator_5_1_3_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_2_Final.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_13.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_slf4j_jul_to_slf4j_1_7_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_13.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_slf4j_log4j_over_slf4j_1_7_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_13.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_13.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_1_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_3_0_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_autoconfigure_1_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_3_0_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_1_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_3_0_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_aop_1_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_3_0_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_3_0_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_jdbc_1_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_3_0_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_logging_1_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_3_0_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_tomcat_1_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_3_0_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_web_1_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_3_0_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_data_spring_data_commons_1_9_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_11_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_data_spring_data_jpa_1_7_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_9_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_aop_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_aspects_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_beans_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_context_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_core_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_expression_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_jdbc_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_orm_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_tx_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_springframework_spring_webmvc_4_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_3_RELEASE.xml" />
-      <change type="MOVED" beforePath="D:\java projects\Project LibraryOnline\.idea\libraries\Maven__org_yaml_snakeyaml_1_14.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_16.xml" />
     </list>
     <ignored path="Project LibraryOnline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,36 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceTitles.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceTitles.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ControllerApiBooks.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Controller/ControllerApiBooks.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -118,21 +43,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
-                <element signature="e#539#540#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerWebInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Controller/ControllerWebInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,10 +55,12 @@
       <file leaf-file-name="WebConfiguration.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63297874">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.41319445">
+              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
+                <element signature="e#796#797#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,7 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Exception/WrongNameFormatException.java" />
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Dao/DaoBook.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
@@ -183,6 +98,8 @@
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceTitles.java" />
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/CORSConfiguration.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/CORSConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Controller/ControllerApiBooks.java" />
         <option value="$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebConfiguration.java" />
       </list>
@@ -288,6 +205,8 @@
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -506,30 +425,6 @@
       <created>1444731523865</created>
       <option name="number" value="Default" />
       <updated>1444731523865</updated>
-    </task>
-    <task id="LOCAL-00003" summary="changes">
-      <created>1445267202360</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1445267202361</updated>
-    </task>
-    <task id="LOCAL-00004" summary="finished dao and service">
-      <created>1445325822849</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1445325822849</updated>
-    </task>
-    <task id="LOCAL-00005" summary="changes">
-      <created>1445331407358</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1445331407358</updated>
-    </task>
-    <task id="LOCAL-00006" summary="changes">
-      <created>1445331792968</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1445331792968</updated>
     </task>
     <task id="LOCAL-00007" summary="changes UTF8">
       <created>1445334701816</created>
@@ -801,7 +696,31 @@
       <option name="project" value="LOCAL" />
       <updated>1448895840016</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Cross-origin resource sharing added">
+      <created>1449062455263</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1449062455264</updated>
+    </task>
+    <task id="LOCAL-00053" summary="changes">
+      <created>1449062911055</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1449062911055</updated>
+    </task>
+    <task id="LOCAL-00054" summary="changes">
+      <created>1449063714604</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1449063714605</updated>
+    </task>
+    <task id="LOCAL-00055" summary="changes">
+      <created>1449063920966</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1449063920966</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -810,12 +729,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1637931" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33632287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33632287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2523511" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -825,7 +745,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -867,6 +786,7 @@
     <MESSAGE value="pdf title parser added" />
     <MESSAGE value="working pdf parser" />
     <MESSAGE value="hope working pdf parser)" />
+    <MESSAGE value="Cross-origin resource sharing added" />
     <MESSAGE value="changes" />
     <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
@@ -1204,35 +1124,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceTitles.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Controller/ControllerWebInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7234042">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
-          <folding />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.19675925">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Controller/ControllerWebInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/Service/ServiceTitles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.3113426">
+          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-0.5706019">
           <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding />
         </state>
@@ -1248,22 +1179,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#539#540#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GVA/LibraryOnline/WebConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63297874">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.41319445">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
           </folding>
         </state>
       </provider>
