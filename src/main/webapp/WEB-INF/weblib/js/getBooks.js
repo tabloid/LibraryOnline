@@ -1,5 +1,6 @@
+var urlString = "/api/books";
+
 function getBooks(){
-	var urlString = "/api/books";
 	var result;
 	$.ajax({
 		type : 'get',
@@ -17,16 +18,16 @@ function printBooks(books){
 	var string =
 	"<div class = 'row'>" +
 	"<div class = 'col-sm-6'>" +
-	"<img alt='Embedded Image' " +
+	"<img height=50% width=50% alt='Embedded Image' " +
     "src='data:image/jpg;base64," +
     book.title + "'/>" +
     "</div>" +
     "<div class = 'col-sm-6'>" +
-    "<p>" + book.id + "</p>" +
     "<p>" + book.feature + "</p>" +
     "<p>" + book.name + "</p>" +
     "<p>" + book.author + "</p>" +
     "<p>" + book.year + "</p>" +
+    "<p><a href='" + urlString + "/" + book.id + "'>скачать</a></p>" +
     "</div>" +
     "</div>";
 	$(block).append(string);
