@@ -14,7 +14,7 @@ function getBooks(){
 function printBooks(books){
 	var block = $("#books");
 	var string = "<div>" + books[0].name + "</div>";
-	$(block).add(string);
+	$(block).append(string);
 }
 
 $(document).ready(function(){
