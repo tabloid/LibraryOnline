@@ -7,7 +7,7 @@ function getBooks(){
         success : function(obj){
         		return obj;
             }
-        });
+        }).responseJSON;
 }
 
 function printBooks(){
