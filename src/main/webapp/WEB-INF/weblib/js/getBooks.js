@@ -4,22 +4,19 @@ function getBooks(){
 	$.ajax({
 		type : 'get',
         url : urlString,
-        async: false,
         dataType : "json",
         success : function(obj){
-        		result = obj;
+        		printBooks(obj);
             }
         });
-    return result;
 }
 
-function printBooks(){
-	var books = getBooks();
+function printBooks(books){
 	var block = $("#books");
 	var string = "<div>" + books[0].name + "</div>";
 	$(block).add(string);
 }
 
 $(document).ready(function(){
-	printBooks();
+	getBooks();
 })
