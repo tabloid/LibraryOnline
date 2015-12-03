@@ -13,11 +13,22 @@ function getBooks(){
 
 function printBooks(books){
 	var block = $("#books");
-	var string =
+	var book =
+	var string = books[0];
+	"<div class = 'row'>" +
+	"<div class = 'col-sm-6'>" +
 	"<img alt='Embedded Image' " +
     "src='data:image/jpg;base64," +
-    books[0].title +
-    "'/>";
+    book.title + "'/>" +
+    "</div>" +
+    "<div class = 'col-sm-6'>" +
+    "<p>" + book.id + "</p>" +
+    "<p>" + book.feature + "</p>" +
+    "<p>" + book.name + "</p>" +
+    "<p>" + book.author + "</p>" +
+    "<p>" + book.year + "</p>" +
+    "</div>" +
+    "</div>";
 	$(block).append(string);
 }
 
