@@ -1,4 +1,3 @@
-
 function getBooks(){
 	var urlString = "/api/books";
 	$.ajax({
@@ -6,11 +5,20 @@ function getBooks(){
         url : urlString,
         dataType : "json",
         success : function(obj){
-			alert(obj[0].name);
+        		return obj;
             }
         });
 }
 
+function printBooks(){
+	var books = getBooks();
+	var block = $("#books");
+	for (int i = 0; i <= books.length; i++){
+		var string = "<div>" + books[i].name + "/div";
+		$(block).add(string);
+	}
+}
+
 $(document).ready(function(){
-	getBooks();
+	printBooks();
 })
