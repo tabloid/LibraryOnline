@@ -6,7 +6,7 @@ function getBooks(){
         url : urlString,
         dataType : "json",
         success : function(obj){
-			alert(obj.getName);
+			alert(obj[0].name);
             }
         });
 }
