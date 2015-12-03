@@ -1,13 +1,15 @@
 function getBooks(){
 	var urlString = "/api/books";
+	var result;
 	return $.ajax({
 		type : 'get',
         url : urlString,
         dataType : "json",
         success : function(obj){
-        		return obj;
+        		result = obj;
             }
-        }).responseJSON;
+        });
+    return result;
 }
 
 function printBooks(){
