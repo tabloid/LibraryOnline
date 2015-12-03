@@ -27,7 +27,7 @@ function printBooks(books){
     "<p>" + book.name + "</p>" +
     "<p>" + book.author + "</p>" +
     "<p>" + book.year + "</p>" +
-    "<p><a href='" + urlString + "/" + book.id + "'>скачать</a></p>" +
+    "<p><a href='" + urlString + "/" + book.id + "'>download</a></p>" +
     "</div>" +
     "</div>";
 	$(block).append(string);
