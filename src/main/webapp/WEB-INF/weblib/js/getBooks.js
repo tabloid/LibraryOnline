@@ -14,6 +14,7 @@ function getBooks(){
 function printBooks(books){
 	var block = $("#books");
 	var book = books[0];
+	var string =
 	"<div class = 'row'>" +
 	"<div class = 'col-sm-6'>" +
 	"<img alt='Embedded Image' " +
