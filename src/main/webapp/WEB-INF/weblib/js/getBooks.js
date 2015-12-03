@@ -1,7 +1,7 @@
 function getBooks(){
 	var urlString = "/api/books";
 	var result;
-	return $.ajax({
+	$.ajax({
 		type : 'get',
         url : urlString,
         dataType : "json",
