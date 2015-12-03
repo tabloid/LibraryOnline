@@ -4,6 +4,7 @@ function getBooks(){
 	$.ajax({
 		type : 'get',
         url : urlString,
+        async: false,
         dataType : "json",
         success : function(obj){
         		result = obj;
