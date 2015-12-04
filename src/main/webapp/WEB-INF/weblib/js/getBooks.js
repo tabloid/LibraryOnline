@@ -18,7 +18,7 @@ function printBooks(books){
 	var string =
 	"<div class = 'row'>" +
 	"<div class = 'col-sm-6'>" +
-	"<img height=50% width=50% alt='Embedded Image' " +
+	"<img alt='Embedded Image' " +
     "src='data:image/jpg;base64," +
     book.title + "'/>" +
     "</div>" +

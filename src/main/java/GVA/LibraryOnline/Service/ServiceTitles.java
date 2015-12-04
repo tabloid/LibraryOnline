@@ -53,7 +53,7 @@ public class ServiceTitles {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         PDDocument document = PDDocument.load(byteArrayInputStream);
         PDFRenderer pdfRenderer = new PDFRenderer(document);
-        BufferedImage bufferedImage = pdfRenderer.renderImage(0, 0.7F);
+        BufferedImage bufferedImage = pdfRenderer.renderImage(0, 0.3F);
         ImageIO.write(bufferedImage, "jpg", byteArrayOutputStream);
         document.close();
         byte[] output = byteArrayOutputStream.toByteArray();
