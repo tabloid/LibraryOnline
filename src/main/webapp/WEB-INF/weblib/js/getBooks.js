@@ -14,23 +14,25 @@ function getBooks(){
 
 function printBooks(books){
 	var block = $("#books");
-	var book = books[0];
-	var string =
-	"<div class = 'row'>" +
-	"<div class = 'col-sm-6'>" +
-	"<img alt='Embedded Image' " +
-    "src='data:image/jpg;base64," +
-    book.title + "'/>" +
-    "</div>" +
-    "<div class = 'col-sm-6'>" +
-    "<p>" + book.feature + "</p>" +
-    "<p>" + book.name + "</p>" +
-    "<p>" + book.author + "</p>" +
-    "<p>" + book.year + "</p>" +
-    "<p><a href='" + urlString + "/" + book.id + "'>download</a></p>" +
-    "</div>" +
-    "</div>";
-	$(block).append(string);
+	for (i = 0; i < books.length; i++){
+		var book = books[i];
+    	var string =
+    	"<div class = 'row'>" +
+    	"<div class = 'col-sm-6'>" +
+    	"<img alt='Embedded Image' " +
+        "src='data:image/jpg;base64," +
+        book.title + "'/>" +
+        "</div>" +
+        "<div class = 'col-sm-6'>" +
+        "<p>" + book.feature + "</p>" +
+        "<p>" + book.name + "</p>" +
+        "<p>" + book.author + "</p>" +
+        "<p>" + book.year + "</p>" +
+        "<p><a href='" + urlString + "/" + book.id + "'>download</a></p>" +
+        "</div>" +
+        "</div>";
+    	$(block).append(string);
+	}
 }
 
 $(document).ready(function(){
