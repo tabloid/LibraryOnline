@@ -5,6 +5,7 @@ import com.lowagie.text.*;
 import com.lowagie.text.pdf.PdfImportedPage;
 import com.lowagie.text.pdf.PdfReader;
 import com.lowagie.text.pdf.PdfWriter;
+import com.lowagie.text.pdf.RandomAccessFileOrArray;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
 import org.springframework.stereotype.Service;
@@ -24,17 +25,11 @@ import java.io.IOException;
 public class ServiceTitles {
 
     private byte[] getPdfPageFromBook(byte[] input) throws IOException, DocumentException {
-        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(input);
         Document document = new Document(PageSize.A4, 0, 0, 0, 0);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         PdfWriter writer = PdfWriter.getInstance(document, byteArrayOutputStream);
         PdfReader reader = null;
-        try {
-            reader = new PdfReader(byteArrayInputStream);
-        } catch (OutOfMemoryError ex) {
-            System.out.println(ex);
-            return null;
-        }
+        reader = new PdfReader(new RandomAccessFileOrArray(input), null);
         document.open();
         PdfImportedPage page = writer.getImportedPage(reader, 1);
         Image image = Image.getInstance(page);
@@ -43,7 +38,6 @@ public class ServiceTitles {
         document.add(image);
         document.close();
         byte[] output = byteArrayOutputStream.toByteArray();
-        byteArrayInputStream.close();
         byteArrayOutputStream.close();
         return output;
     }
