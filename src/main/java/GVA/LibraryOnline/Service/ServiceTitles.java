@@ -23,7 +23,7 @@ import java.io.IOException;
 @Service
 public class ServiceTitles {
 
-    private byte[] getFirstPdfPage(byte[] input) throws IOException, DocumentException {
+    private byte[] getPdfPageFromBook(byte[] input) throws IOException, DocumentException {
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(input);
         Document document = new Document(PageSize.A4, 0, 0, 0, 0);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -48,7 +48,7 @@ public class ServiceTitles {
         return output;
     }
 
-    private byte[] getFirstJPGPage(byte[] input) throws IOException {
+    private byte[] getJPGPageFromPdfPage(byte[] input) throws IOException {
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(input);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         PDDocument document = PDDocument.load(byteArrayInputStream);
@@ -62,8 +62,10 @@ public class ServiceTitles {
         return output;
     }
 
-    public byte[] getFirstPage(byte[] input) throws IOException, DocumentException {
-        return getFirstJPGPage(getFirstPdfPage(input));
+    public byte[] getFirstPage(byte[] input, String extention) throws IOException, DocumentException {
+        if (extention.equals("pdf"))
+        return getJPGPageFromPdfPage(getPdfPageFromBook(input));
+        else return null;
     }
 
 

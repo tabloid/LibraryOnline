@@ -62,7 +62,7 @@ public class ControllerApiBooks {
                 String fileName = file.getOriginalFilename();
                 byte[] bytes = file.getBytes();
                 serviceBooks.addNewBook(fileName, feature, bytes);
-                log += fileName + "uploaded\r\n";
+                log += fileName + " uploaded\r\n";
             }
         }
         return log;

@@ -76,7 +76,7 @@ public class ServiceBooks {
             entityBook.setYear(year);
             entityBook.setData(bytes);
             entityBook.setExtention(extention);
-            byte[] title = serviceTitles.getFirstPage(bytes);
+            byte[] title = serviceTitles.getFirstPage(bytes, extention);
             entityBook.setTitle(title);
             daoBook.save(entityBook);
         } else throw new WrongNameFormatException();
