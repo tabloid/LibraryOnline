@@ -28,8 +28,7 @@ public class ServiceTitles {
         Document document = new Document(PageSize.A4, 0, 0, 0, 0);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         PdfWriter writer = PdfWriter.getInstance(document, byteArrayOutputStream);
-        PdfReader reader = null;
-        reader = new PdfReader(new RandomAccessFileOrArray(input), null);
+        PdfReader reader = new PdfReader(new RandomAccessFileOrArray(input), null);
         document.open();
         PdfImportedPage page = writer.getImportedPage(reader, 1);
         Image image = Image.getInstance(page);
