@@ -54,15 +54,18 @@ public class ControllerApiBooks {
     }
 
     @RequestMapping(value = "/books/{feature}/new", method = RequestMethod.POST)
-    public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile file)
+    public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile[] files)
             throws IOException, WrongNameFormatException, DocumentException {
-        if (!file.isEmpty()) {
-            String fileName = file.getOriginalFilename();
-            byte[] bytes = file.getBytes();
-            serviceBooks.addNewBook(fileName, feature, bytes);
-            return "OK";
+        String log = "start\r\n";
+        for (MultipartFile file : files){
+            if (!file.isEmpty()) {
+                String fileName = file.getOriginalFilename();
+                byte[] bytes = file.getBytes();
+                serviceBooks.addNewBook(fileName, feature, bytes);
+                log += fileName + "uploaded\r\n";
+            }
         }
-        return "FAILED";
+        return log;
     }
 
 }
