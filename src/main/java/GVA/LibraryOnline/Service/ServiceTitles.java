@@ -20,7 +20,7 @@ import java.io.IOException;
  * Created by V.Herasymenko on 04.11.2015.
  */
 
-//only for pdf available
+
 @Service
 public class ServiceTitles {
 
@@ -55,6 +55,7 @@ public class ServiceTitles {
         return output;
     }
 
+    //only for pdf available
     public byte[] getFirstPage(byte[] input, String extention) throws IOException, DocumentException {
         if (extention.equals("pdf"))
         return getJPGPageFromPdfPage(getPdfPageFromBook(input));

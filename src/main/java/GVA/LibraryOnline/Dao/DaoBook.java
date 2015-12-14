@@ -20,7 +20,6 @@ public class DaoBook {
     protected EntityManager entityManager;
 
     public List<EntityBook> getListByCriteria(String queryStr){
-        System.out.println(queryStr);
         Query query = entityManager.createQuery(queryStr);
         List<EntityBook> list = query.getResultList();
         return list;
@@ -32,6 +31,11 @@ public class DaoBook {
 
     public void save(EntityBook entityBook){
         entityManager.persist(entityBook);
+    }
+
+    public void remove(){
+        String query = "delete from books";
+        entityManager.createQuery(query).executeUpdate();
     }
 
 }

@@ -6,6 +6,7 @@ import GVA.LibraryOnline.Exception.WrongNameFormatException;
 import com.lowagie.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
@@ -47,8 +48,10 @@ public class ServiceBooks {
         return daoBook.getListByCriteria(query.toString());
     }
 
-    public void addNewBook(String fileName, String feature, byte[] bytes)
+    public void addNewBook(String feature, MultipartFile file)
             throws WrongNameFormatException, DocumentException, IOException {
+        String fileName = file.getOriginalFilename();
+        byte[] bytes = file.getBytes();
         String extention = fileName.substring(fileName.lastIndexOf(".") + 1);
         String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
         //split by dot symbol
@@ -80,5 +83,9 @@ public class ServiceBooks {
             entityBook.setTitle(title);
             daoBook.save(entityBook);
         } else throw new WrongNameFormatException();
+    }
+
+    public void removeAllBooks(){
+        daoBook.remove();
     }
 }

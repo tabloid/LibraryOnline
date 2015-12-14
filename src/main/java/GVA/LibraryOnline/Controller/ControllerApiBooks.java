@@ -60,13 +60,17 @@ public class ControllerApiBooks {
         String log = "start\r\n";
         for (MultipartFile file : files){
             if (!file.isEmpty()) {
-                String fileName = file.getOriginalFilename();
-                byte[] bytes = file.getBytes();
-                serviceBooks.addNewBook(fileName, feature, bytes);
-                log += fileName + " uploaded\r\n";
+                serviceBooks.addNewBook(feature, file);
+                log += file.getOriginalFilename() + " uploaded\r\n";
             }
         }
         return log;
+    }
+
+    @RequestMapping(value = "/remove", method = RequestMethod.GET)
+    public String removeAllBooks(){
+        serviceBooks.removeAllBooks();
+        return "books removed";
     }
 
 }
