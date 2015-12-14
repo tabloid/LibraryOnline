@@ -34,7 +34,7 @@ public class DaoBook {
     }
 
     public void remove(){
-        String query = "delete from books";
+        String query = "delete from EntityBook books";
         entityManager.createQuery(query).executeUpdate();
     }
 
