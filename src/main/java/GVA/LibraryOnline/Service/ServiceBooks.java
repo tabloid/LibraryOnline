@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -22,7 +23,8 @@ public class ServiceBooks {
     ServiceTitles serviceTitles;
 
     public List<EntityBook> getAllBooks() {
-        String queryStr = "select table from EntityBook table";
+        String queryStr = "select new EntityBook(t.id, t.feature, t.name, t.author, t.year, t.extention, t.title) " +
+                "from EntityBook t";
         return daoBook.getListByCriteria(queryStr);
     }
 
@@ -51,7 +53,6 @@ public class ServiceBooks {
     public void addNewBook(String feature, MultipartFile file)
             throws WrongNameFormatException, DocumentException, IOException {
         String fileName = file.getOriginalFilename();
-        byte[] bytes = file.getBytes();
         String extention = fileName.substring(fileName.lastIndexOf(".") + 1);
         String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
         //split by dot symbol
@@ -77,10 +78,11 @@ public class ServiceBooks {
             entityBook.setName(name);
             entityBook.setAuthor(author);
             entityBook.setYear(year);
-            entityBook.setData(bytes);
             entityBook.setExtention(extention);
-            byte[] title = serviceTitles.getFirstPage(bytes, extention);
+            InputStream inputStream = file.getInputStream();
+            byte[] title = serviceTitles.getFirstPage(inputStream, extention);
             entityBook.setTitle(title);
+            entityBook.setData(file);
             daoBook.save(entityBook);
         } else throw new WrongNameFormatException();
     }

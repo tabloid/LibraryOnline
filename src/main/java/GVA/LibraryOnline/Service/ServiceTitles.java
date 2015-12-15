@@ -15,6 +15,7 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by V.Herasymenko on 04.11.2015.
@@ -24,7 +25,7 @@ import java.io.IOException;
 @Service
 public class ServiceTitles {
 
-    private byte[] getPdfPageFromBook(byte[] input) throws IOException, DocumentException {
+    private byte[] getPdfPageFromBook(InputStream input) throws IOException, DocumentException {
         Document document = new Document(PageSize.A4, 0, 0, 0, 0);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         PdfWriter writer = PdfWriter.getInstance(document, byteArrayOutputStream);
@@ -56,7 +57,7 @@ public class ServiceTitles {
     }
 
     //only for pdf available
-    public byte[] getFirstPage(byte[] input, String extention) throws IOException, DocumentException {
+    public byte[] getFirstPage(InputStream input, String extention) throws IOException, DocumentException {
         if (extention.equals("pdf"))
         return getJPGPageFromPdfPage(getPdfPageFromBook(input));
         else return null;

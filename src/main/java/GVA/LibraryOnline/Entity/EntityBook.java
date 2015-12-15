@@ -2,8 +2,11 @@ package GVA.LibraryOnline.Entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by V.Herasymenko on 13.10.2015.
@@ -13,7 +16,7 @@ import javax.persistence.*;
 public class EntityBook {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
-    @SequenceGenerator(name = "users_seq_gen", sequenceName = "books_id_seq")
+    @SequenceGenerator(name = "users_seq_gen", sequenceName = "my_sqe")
     private int id;
     @Column(name = "feature")
     private String feature;
@@ -31,6 +34,19 @@ public class EntityBook {
     private String extention;
     @Column(name = "title")
     private byte[] title;
+
+    public EntityBook(int id, String feature, String name, String author, String year, String extention, byte[] title) {
+        this.id = id;
+        this.feature = feature;
+        this.name = name;
+        this.author = author;
+        this.year = year;
+        this.extention = extention;
+        this.title = title;
+    }
+
+    public EntityBook() {
+    }
 
     public int getId() {
         return id;
@@ -76,8 +92,8 @@ public class EntityBook {
         return data;
     }
 
-    public void setData(byte[] data) {
-        this.data = data;
+    public void setData(MultipartFile file) throws IOException{
+        this.data = file.getBytes();
     }
 
     public String getExtention() { return extention; }
