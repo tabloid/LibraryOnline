@@ -82,7 +82,7 @@ public class ServiceBooks {
             InputStream inputStream = file.getInputStream();
             byte[] title = serviceTitles.getFirstPage(inputStream, extention);
             entityBook.setTitle(title);
-            entityBook.setData(file);
+            entityBook.setData(file.getBytes());
             daoBook.save(entityBook);
         } else throw new WrongNameFormatException();
     }

@@ -11,7 +11,6 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.lang.ref.SoftReference;
 import java.util.List;
 
 /**
@@ -58,7 +57,7 @@ public class ControllerApiBooks {
     public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile[] files)
             throws IOException, WrongNameFormatException, DocumentException {
         String log = "start\r\n";
-        for (MultipartFile file : files){
+        for (MultipartFile file : files) {
             if (!file.isEmpty()) {
                 serviceBooks.addNewBook(feature, file);
                 log += file.getOriginalFilename() + " uploaded\r\n";
@@ -68,7 +67,7 @@ public class ControllerApiBooks {
     }
 
     @RequestMapping(value = "/remove", method = RequestMethod.GET)
-    public String removeAllBooks(){
+    public String removeAllBooks() {
         serviceBooks.removeAllBooks();
         return "books removed";
     }

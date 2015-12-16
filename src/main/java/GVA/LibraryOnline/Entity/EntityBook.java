@@ -2,11 +2,8 @@ package GVA.LibraryOnline.Entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
-import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * Created by V.Herasymenko on 13.10.2015.
@@ -92,11 +89,13 @@ public class EntityBook {
         return data;
     }
 
-    public void setData(MultipartFile file) throws IOException{
-        this.data = file.getBytes();
+    public void setData(byte[] data) {
+        this.data = data;
     }
 
-    public String getExtention() { return extention; }
+    public String getExtention() {
+        return extention;
+    }
 
     public void setExtention(String extention) {
         this.extention = extention;
