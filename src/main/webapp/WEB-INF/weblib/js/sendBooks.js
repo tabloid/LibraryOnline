@@ -15,6 +15,3 @@ function sendBooks(){
         });
     });
 }
-$(document).ready(function(){
-	sendBooks();
-})

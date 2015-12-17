@@ -34,7 +34,3 @@ function printBooks(books){
     	$(block).append(string);
 	}
 }
-
-$(document).ready(function(){
-	getBooks();
-})

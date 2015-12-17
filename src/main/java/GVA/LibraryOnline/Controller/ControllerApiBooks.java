@@ -69,7 +69,7 @@ public class ControllerApiBooks {
         return log;
     }
 
-    @RequestMapping(value = "/books/features", method = RequestMethod.GET,
+    @RequestMapping(value = "/features", method = RequestMethod.GET,
             produces = "application/json")
     public List<EntityFeature> getFeatures() {
         return serviceFeature.getAllEntityFeatures();

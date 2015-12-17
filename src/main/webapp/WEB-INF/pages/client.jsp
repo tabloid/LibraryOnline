@@ -5,23 +5,18 @@
 <head>
 <title>index</title>
     <jsp:include page="headInclude.jsp"/>
+    <script>
+    $(document).ready(function(){
+    	getFeatures();
+    	getBooks();
+    })
+    </script>
 </head>
 <body>
 	<div class="wrapper container">
 		<div class="row">
 			<div class="col-sm-3">
-				<ul>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-				</ul>
+				<div id="features"></div>
 			</div>
 			<div class="col-sm-9">
 				<div id="books"></div>
