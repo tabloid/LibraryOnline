@@ -2,6 +2,7 @@ package GVA.LibraryOnline.Service;
 
 import GVA.LibraryOnline.Dao.DaoBook;
 import GVA.LibraryOnline.Entity.EntityBook;
+import GVA.LibraryOnline.Entity.EntityFeature;
 import GVA.LibraryOnline.Exception.WrongNameFormatException;
 import com.lowagie.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,13 @@ import java.util.List;
  * Created by V.Herasymenko on 13.10.2015.
  */
 @Service
-public class ServiceBooks {
+public class ServiceBook {
     @Autowired
     DaoBook daoBook;
     @Autowired
-    ServiceTitles serviceTitles;
+    ServiceTitle serviceTitle;
+    @Autowired
+    ServiceFeature serviceFeature;
 
     public List<EntityBook> getAllBooks() {
         String queryStr = "select new EntityBook(t.id, t.feature, t.name, t.author, t.year, t.extention, t.title) " +
@@ -74,20 +77,21 @@ public class ServiceBooks {
                 name = array[1].trim();
 
             EntityBook entityBook = new EntityBook();
-            entityBook.setFeature(feature);
+            EntityFeature entityFeature = serviceFeature.getEntityFeature(feature);
+            entityBook.setFeature(entityFeature);
             entityBook.setName(name);
             entityBook.setAuthor(author);
             entityBook.setYear(year);
             entityBook.setExtention(extention);
             InputStream inputStream = file.getInputStream();
-            byte[] title = serviceTitles.getFirstPage(inputStream, extention);
+            byte[] title = serviceTitle.getFirstPage(inputStream, extention);
             entityBook.setTitle(title);
             entityBook.setData(file.getBytes());
             daoBook.save(entityBook);
         } else throw new WrongNameFormatException();
     }
 
-    public void removeAllBooks(){
+    public void removeAllBooks() {
         daoBook.remove();
     }
 }

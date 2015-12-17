@@ -15,26 +15,27 @@ public class EntityBook {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
     @SequenceGenerator(name = "users_seq_gen", sequenceName = "books_id_seq")
     private int id;
-    @Column(name = "feature")
-    private String feature;
     @Column(name = "name")
     private String name;
     @Column(name = "author")
     private String author;
     @Column(name = "year")
     private String year;
-    @Column(name = "data")
-    @JsonIgnore
-    private byte[] data;
     @Column(name = "extention")
     @JsonIgnore
     private String extention;
+    @OneToOne(cascade = CascadeType.ALL)
+    private EntityFeature entityFeature;
     @Column(name = "title")
     private byte[] title;
+    @Column(name = "data")
+    @JsonIgnore
+    private byte[] data;
 
-    public EntityBook(int id, String feature, String name, String author, String year, String extention, byte[] title) {
+    public EntityBook(int id, EntityFeature feature, String name,
+                      String author, String year, String extention, byte[] title) {
         this.id = id;
-        this.feature = feature;
+        this.entityFeature = feature;
         this.name = name;
         this.author = author;
         this.year = year;
@@ -54,11 +55,11 @@ public class EntityBook {
     }
 
     public String getFeature() {
-        return feature;
+        return entityFeature.getFeature();
     }
 
-    public void setFeature(String feature) {
-        this.feature = feature;
+    public void setFeature(EntityFeature entityFeature) {
+        this.entityFeature = entityFeature;
     }
 
     public String getName() {

@@ -1,8 +1,10 @@
 package GVA.LibraryOnline.Controller;
 
 import GVA.LibraryOnline.Entity.EntityBook;
+import GVA.LibraryOnline.Entity.EntityFeature;
 import GVA.LibraryOnline.Exception.WrongNameFormatException;
-import GVA.LibraryOnline.Service.ServiceBooks;
+import GVA.LibraryOnline.Service.ServiceBook;
+import GVA.LibraryOnline.Service.ServiceFeature;
 import com.lowagie.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,24 +24,25 @@ import java.util.List;
 public class ControllerApiBooks {
 
     @Autowired
-    ServiceBooks serviceBooks;
+    ServiceBook serviceBook;
+    @Autowired
+    ServiceFeature serviceFeature;
 
-    @RequestMapping(value = "/books",
-            method = RequestMethod.GET,
+    @RequestMapping(value = "/books", method = RequestMethod.GET,
             produces = "application/json")
     public List<EntityBook> getBooks(@RequestParam(value = "feature", required = false) String feature,
                                      @RequestParam(value = "name", required = false) String name,
                                      @RequestParam(value = "author", required = false) String author,
                                      @RequestParam(value = "year", required = false) String year) {
         if (feature == null && name == null && author == null && year == null)
-            return serviceBooks.getAllBooks();
+            return serviceBook.getAllBooks();
         else
-            return serviceBooks.getBooksByCriteria(feature, name, author, year);
+            return serviceBook.getBooksByCriteria(feature, name, author, year);
     }
 
     @RequestMapping(value = "/books/{id}", method = RequestMethod.GET)
     public void getBook(@PathVariable int id, HttpServletResponse response) throws IOException {
-        EntityBook entityBook = serviceBooks.getBookById(id);
+        EntityBook entityBook = serviceBook.getBookById(id);
         if (entityBook != null) {
             response.setStatus(200);
             String filename = entityBook.getId() + "." + entityBook.getExtention();
@@ -59,16 +62,22 @@ public class ControllerApiBooks {
         String log = "start\r\n";
         for (MultipartFile file : files) {
             if (!file.isEmpty()) {
-                serviceBooks.addNewBook(feature, file);
+                serviceBook.addNewBook(feature, file);
                 log += file.getOriginalFilename() + " uploaded\r\n";
             }
         }
         return log;
     }
 
+    @RequestMapping(value = "/books/features", method = RequestMethod.GET,
+            produces = "application/json")
+    public List<EntityFeature> getFeatures() {
+        return serviceFeature.getAllEntityFeatures();
+    }
+
     @RequestMapping(value = "/remove", method = RequestMethod.GET)
     public String removeAllBooks() {
-        serviceBooks.removeAllBooks();
+        serviceBook.removeAllBooks();
         return "books removed";
     }
 

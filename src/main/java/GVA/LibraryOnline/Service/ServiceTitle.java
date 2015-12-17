@@ -23,7 +23,7 @@ import java.io.InputStream;
 
 
 @Service
-public class ServiceTitles {
+public class ServiceTitle {
 
     private byte[] getPdfPageFromBook(InputStream input) throws IOException, DocumentException {
         Document document = new Document(PageSize.A4, 0, 0, 0, 0);
@@ -59,7 +59,7 @@ public class ServiceTitles {
     //only for pdf available
     public byte[] getFirstPage(InputStream input, String extention) throws IOException, DocumentException {
         if (extention.equals("pdf"))
-        return getJPGPageFromPdfPage(getPdfPageFromBook(input));
+            return getJPGPageFromPdfPage(getPdfPageFromBook(input));
         else return null;
     }
 

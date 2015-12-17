@@ -19,21 +19,21 @@ public class DaoBook {
     @PersistenceContext
     protected EntityManager entityManager;
 
-    public List<EntityBook> getListByCriteria(String queryStr){
+    public List<EntityBook> getListByCriteria(String queryStr) {
         Query query = entityManager.createQuery(queryStr);
         List<EntityBook> list = query.getResultList();
         return list;
     }
 
-    public EntityBook getBookById(int id){
+    public EntityBook getBookById(int id) {
         return entityManager.find(EntityBook.class, id);
     }
 
-    public void save(EntityBook entityBook){
+    public void save(EntityBook entityBook) {
         entityManager.persist(entityBook);
     }
 
-    public void remove(){
+    public void remove() {
         String query = "delete from EntityBook books";
         entityManager.createQuery(query).executeUpdate();
     }
