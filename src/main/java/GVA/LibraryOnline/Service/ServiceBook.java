@@ -26,9 +26,7 @@ public class ServiceBook {
     ServiceFeature serviceFeature;
 
     public List<EntityBook> getAllBooks() {
-        String queryStr = "select new EntityBook(t.id, t.feature, t.name, t.author, t.year, t.extention, t.title) " +
-                "from EntityBook t";
-        return daoBook.getListByCriteria(queryStr);
+        return daoBook.getAllBooks();
     }
 
     public EntityBook getBookById(int id) {

@@ -19,6 +19,14 @@ public class DaoBook {
     @PersistenceContext
     protected EntityManager entityManager;
 
+    public List<EntityBook> getAllBooks(){
+        String queryStr = "select new EntityBook(t.id, t.entityFeature, t.name, t.author, " +
+                "t.year, t.extention, t.title) from EntityBook t";
+        Query query = entityManager.createQuery(queryStr);
+        List<EntityBook> list = query.getResultList();
+        return list;
+    }
+
     public List<EntityBook> getListByCriteria(String queryStr) {
         Query query = entityManager.createQuery(queryStr);
         List<EntityBook> list = query.getResultList();
