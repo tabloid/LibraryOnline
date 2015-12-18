@@ -11,7 +11,7 @@
 		<div class="row">
 			<form id="form" action="../api/books/test/new" enctype="multipart/form-data" method="post">
         		<p><input type="file" name="file" multiple="true">
-        		<input type="submit" value="Отправить"></p>
+        		<input type="submit" value="Upload"></p>
         	</form>
 		</div>
 	</div>

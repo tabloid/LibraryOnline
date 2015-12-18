@@ -34,9 +34,11 @@ public class ServiceBook {
     }
 
     public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year) {
-        StringBuilder query = new StringBuilder("select table from EntityBook table where ");
+        String queryStr = "select new EntityBook(t.id, t.entityFeature, t.name, t.author, " +
+                "t.year, t.extention, t.title) from EntityBook t where ";
+        StringBuilder query = new StringBuilder(queryStr);
         if (feature != null) {
-            query.append("LOWER(feature) like '%").append(feature.toLowerCase()).append("%' and ");
+            query.append("LOWER(t.entityFeature.feature) like '%").append(feature.toLowerCase()).append("%' and ");
         }
         if (name != null) {
             query.append("LOWER(name) like '%").append(name.toLowerCase()).append("%' and ");

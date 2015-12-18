@@ -1,10 +1,11 @@
-var urlString = "/api/features";
+var featuresId = "#features";
+var featuresUrl = "/api/features";
+var featuresUrlByQuery = "/api/books?feature=";
 
 function getFeatures(){
-	var result;
 	$.ajax({
 		type : 'get',
-        url : urlString,
+        url : featuresUrl,
         dataType : "json",
         success : function(obj){
         		printFeatures(obj);
@@ -13,13 +14,13 @@ function getFeatures(){
 }
 
 function printFeatures(features){
-	var block = $("#features");
 	for (i = 0; i < features.length; i++){
-		var feature = features[i];
+		var feature = features[i].feature;
+		var href = featuresUrlByQuery + feature;
     	var string =
     	"<div class = 'row'>" +
-        "<p>" + feature.feature + "</p>" +
+        "<a href='#' onclick='getBooksByQuery(\"" + href + "\")'>" + feature + "</a>" +
         "</div>";
-    	$(block).append(string);
+    	$(featuresId).append(string);
 	}
 }

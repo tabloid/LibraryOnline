@@ -1,7 +1,19 @@
-var urlString = "/api/books";
+var booksId = "#books";
+var booksUrl = "/api/books";
 
 function getBooks(){
-	var result;
+	$.ajax({
+		type : 'get',
+        url : booksUrl,
+        dataType : "json",
+        success : function(obj){
+        		printBooks(obj);
+            }
+        });
+}
+
+function getBooksByQuery(urlString){
+    $(booksId).empty();
 	$.ajax({
 		type : 'get',
         url : urlString,
@@ -13,7 +25,6 @@ function getBooks(){
 }
 
 function printBooks(books){
-	var block = $("#books");
 	for (i = 0; i < books.length; i++){
 		var book = books[i];
     	var string =
@@ -28,9 +39,9 @@ function printBooks(books){
         "<p>" + book.name + "</p>" +
         "<p>" + book.author + "</p>" +
         "<p>" + book.year + "</p>" +
-        "<p><a href='" + urlString + "/" + book.id + "'>download</a></p>" +
+        "<p><a href='" + booksUrl + "/" + book.id + "'>download</a></p>" +
         "</div>" +
         "</div>";
-    	$(block).append(string);
+    	$(booksId).append(string);
 	}
 }
