@@ -24,6 +24,7 @@ function getBooksByQuery(urlString){
         });
 }
 
+
 function printBooks(books){
 	for (i = 0; i < books.length; i++){
 		var book = books[i];

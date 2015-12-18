@@ -19,6 +19,6 @@
 
 <script src="weblib/js/getBooks.js"></script>
 <script src="weblib/js/getFeatures.js"></script>
-
+<script src="weblib/js/addInputText.js"></script>
 
 
