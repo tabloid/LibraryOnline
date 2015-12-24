@@ -5,16 +5,6 @@
 <head>
 <title>index</title>
     <jsp:include page="headInclude.jsp"/>
-
-<style>
-.col-sm-4{
-padding-left : 0;
-}
-input[type="text"]{
-display:none;
-}
-</style>
-
 </head>
 <body onload="Controllers.getBooks(); Controllers.getFeatures(); Controllers.cleanInputs()">
 	<div class="wrapper container">

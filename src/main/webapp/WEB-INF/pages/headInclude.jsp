@@ -2,6 +2,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link rel="stylesheet" href="weblib/css/style.css" type="text/css"/>
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="weblib/bootstrap/bootstrap.min.css">
 

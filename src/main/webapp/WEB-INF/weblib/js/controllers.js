@@ -75,8 +75,10 @@ Controllers.checkboxController = function (obj){
 var input = $(obj).parent().parent().find("input[type='text']");
 if ($(obj).is(":checked"))
     input.css("display","block");
-else
+else{
     input.css("display","none");
+    input.val("");
+}
 }
 Controllers.cleanInputs = function(){
 $(Controllers.searchId).find("input[type='checkbox']").each(function(){
