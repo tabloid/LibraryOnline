@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>index</title>
+	<title>client</title>
+	<link rel="stylesheet" href="weblib/css/style.css" type="text/css"/>
     <jsp:include page="headInclude.jsp"/>
 </head>
 <body onload="Controllers.getBooks(); Controllers.getFeatures(); Controllers.cleanInputs()">
@@ -12,7 +13,11 @@
 		<div class="row">
 			<div class="col-sm-3">
 				<div id="features">
-					<div class="row">Поиск по жанру:</div>
+					<div class="row">
+						<ul class="nav nav-pills nav-stacked">
+							<li class="nav-header">Поиск по жанру:</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<div class="row">Поиск по всем категориям:</div>
