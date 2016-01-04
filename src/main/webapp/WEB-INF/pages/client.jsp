@@ -11,62 +11,69 @@
 </head>
 <body onload="Controllers.Client.getBooks(); Controllers.Client.getFeatures(); Controllers.cleanInputs()">
 	<div class="container">
-		<br>
+		<div class="header">
+        	<ul class="nav nav-pills pull-right">
+          		<li class="active">
+          			<a href="client">Home</a>
+          		</li>
+          		<li><a href="about">About</a></li>
+          		<li><a href="admin">Admin</a></li>
+        	</ul>
+        	<h3 class="text-muted">Online library project</h3>
+		</div>
 		<div class="row">
 			<div class="col-sm-3">
-				<div id="features">
-					<div class="row">
-						<p>Поиск по жанру:</p>
-						<ul class="nav nav-pills nav-stacked">
-						</ul>
-					</div>
+				<div id="features" class="panel panel-default">
+					<div class='panel-heading'>Поиск по жанру</div>
+					<ul class="nav nav-pills nav-stacked"></ul>
 				</div>
-				<div>
-					<div class="row">Поиск по всем категориям:</div>
+				<div class="panel panel-default">
+					<div class='panel-heading'>Поиск по всем категориям</div>
 					<form id="search">
-                		<div class="row">
-                			<div class="col-sm-4">
+                		<div class="panel-body">
+                			<div class="col-sm-5">
                 				<input onchange="Controllers.Client.checkboxController(this)" type="checkbox">
                 				Жанр
                 			</div>
-                			<div class="col-sm-8">
+                			<div class="col-sm-7">
                 				<input type="text" name="feature">
                 			</div>
                 		</div>
-                		<div class="row">
-                			<div class="col-sm-4">
+                		<div class="panel-body">
+                			<div class="col-sm-5">
                 				<input onchange="Controllers.Client.checkboxController(this)" type="checkbox">
                 				Название
                 			</div>
-                			<div class="col-sm-8">
+                			<div class="col-sm-7">
                 				<input type="text" name="name">
                 			</div>
                 		</div>
-                    	<div class="row">
-                    		<div class="col-sm-4">
+                    	<div class="panel-body">
+                    		<div class="col-sm-5">
                     			<input onchange="Controllers.Client.checkboxController(this)" type="checkbox">
                     			Автор
                     		</div>
-                    		<div class="col-sm-8">
+                    		<div class="col-sm-7">
                     			<input type="text" name="author">
                     		</div>
                     	</div>
-                    	<div class="row">
-                    		<div class="col-sm-4">
+                    	<div class="panel-body">
+                    		<div class="col-sm-5">
                     			<input onchange="Controllers.Client.checkboxController(this)" type="checkbox">
                     			Год
                     		</div>
-                    		<div class="col-sm-8">
+                    		<div class="col-sm-7">
                     			<input type="text" name="year">
                     		</div>
                     	</div>
-                        <p><input type="button" onclick="Controllers.Client.searchController()" value="искать"></p>
+                    	<div class="panel-body">
+                        	<input type="button" onclick="Controllers.Client.searchController()" value="искать">
+                        </div>
                 	</form>
 				</div>
 			</div>
-			<div class="col-sm-9">
-				<div id="books"></div>
-			</div>
+			<div id="books" class="col-sm-6 panel panel-default"></div>
+			<div id="sidebar" class="col-sm-3"></div>
 		</div>
 	</div>
 

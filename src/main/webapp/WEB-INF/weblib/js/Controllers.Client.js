@@ -12,6 +12,21 @@ Controllers.Client.getBooks = function (){
             }
     });
 }
+Controllers.Client.getBooksByFeature = function(obj, urlString){
+    var ulBox = $(obj).parent().parent();
+    ulBox.find("li").each(function(){
+        $(this).removeClass("active");
+    });
+	$.ajax({
+		type : 'get',
+        url : urlString,
+        dataType : "json",
+        success : function(){
+        		Controllers.Client.getBooksByQuery(urlString);
+        		$(obj).parent().addClass("active");
+            }
+        });
+}
 Controllers.Client.getBooksByQuery = function(urlString){
 	$.ajax({
 		type : 'get',
@@ -28,19 +43,41 @@ Controllers.Client.printBooks = function(books){
 		var book = books[i];
     	var string =
     	"<div class = 'row'>" +
-    	"<div class = 'col-sm-4'>" +
-    	"<img alt='Embedded Image' " +
-        "src='data:image/jpg;base64," +
-        book.title + "'/>" +
-        "</div>" +
-        "<div class = 'col-sm-4'>" +
-        "<div class='row'><h3>" + book.name + "</h3></div>" +
-        "<div class='row'>" + book.feature + "</div>" +
-        "<p>" + book.author + "</p>" +
-        "<p>" + book.year + "</p>" +
-        "<p><a href='" + Controllers.Client.booksUrl + "/" + book.id + "'>download</a></p>" +
-        "</div>" +
-        "</div><br>";
+    	    "<div class = 'col-sm-5'>" +
+    	        "<img alt='Embedded Image' src='data:image/jpg;base64," +
+    	        book.title + "'/>" +
+            "</div>" +
+            "<div class = 'col-sm-6'>" +
+                "<h3>" +
+                    "<a href='" + Controllers.Client.booksUrl + "/" + book.id + "'>" +
+                    book.name + "</a>" +
+                "</h3>" +
+                "<div class='row'>" +
+                    "<div class='col-sm-4'>" +
+                        "Автор" +
+                    "</div>" +
+                    "<div class='col-sm-8'>" +
+                         book.author +
+                    "</div>" +
+                "</div>" +
+                "<div class='row'>" +
+                    "<div class='col-sm-4'>" +
+                        "<p>Жанр</p>" +
+                    "</div>" +
+                    "<div class='col-sm-8'>" +
+                        book.feature +
+                    "</div>" +
+                "</div>" +
+                "<div class='row'>" +
+                    "<div class='col-sm-4'>" +
+                        "<p>Год</p>" +
+                    "</div>" +
+                    "<div class='col-sm-8'>" +
+                        book.year +
+                    "</div>" +
+                "</div>" +
+            "</div>" +
+        "</div>";
     	$(Controllers.Client.booksId).append(string);
 	}
 }
@@ -59,19 +96,24 @@ Controllers.Client.getFeatures = function (){
         });
 }
 Controllers.Client.printFeatures = function(features){
-    $(Controllers.Client.featuresId).find("ul").empty();
+    var featureList = $(Controllers.Client.featuresId).find("ul");
+    featureList.empty();
+    var string =
+    "<li class='active'>" +
+        "<a href='#' onclick='Controllers.Client.getBooksByFeature(this," +
+         "\"" + Controllers.Client.booksUrl + "\")'>все жанры</a>" +
+    "</li>";
+    featureList.append(string);
 	for (i = 0; i < features.length; i++){
 		var feature = features[i].feature;
 		var href = Controllers.Client.featuresUrlByQuery + feature;
-    	var string =
+    	string =
     	"<li>" +
-        "<a href='#' onclick='Controllers.Client.getBooksByQuery(\"" + href + "\")'>" + feature + "</a>" +
+            "<a href='#' onclick='Controllers.Client.getBooksByFeature(this," +
+             "\"" + href + "\")'>" + feature + "</a>" +
         "</li>";
-    	$(Controllers.Client.featuresId).find("ul").append(string);
+    	featureList.append(string);
 	}
-    string =
-    "<li><a href='#' onclick='Controllers.Client.getBooks()'>все жанры</a></li>";
-    $(Controllers.Client.featuresId).find("ul").append(string);
 }
 // search controllers
 Controllers.Client.searchId="#search";
