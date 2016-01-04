@@ -5,8 +5,10 @@
 <head>
 <title>index</title>
     <jsp:include page="headInclude.jsp"/>
+    <script src="weblib/js/Controllers.js"></script>
+    <script src="weblib/js/Controllers.Admin.js"></script>
 </head>
-<body onload="Controllers.getFeatures()">
+<body onload="Controllers.Admin.getFeatures(); Controllers.cleanInputs()">
 	<div class="wrapper container">
 		<br>
 		<div class="row">
@@ -15,14 +17,12 @@
             		<p>Введите жанр книг (или выберите из списка):</p>
             		<p><input type="text" name="feature"></p>
             		<p><input type="file" name="file" multiple="true" ></p>
-            		<p><input type="button" onclick="Controllers.sendBooks()" value="Upload"></p>
+            		<p><input type="button" onclick="Controllers.Admin.sendBooks()" value="Upload"></p>
             	</form>
 			</div>
 			<div id="features" class="col-sm-3">
 				<p>Доступные жанры:</p>
             	<ul class="nav nav-pills nav-stacked"></ul>
-			</div>
-			<div id="books" class="col-sm-4">
 			</div>
 		</div>
 		<div class="row">
