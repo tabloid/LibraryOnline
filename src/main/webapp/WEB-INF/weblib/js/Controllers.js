@@ -1,3 +1,5 @@
+var Controllers = new Object();
+
 //for admin and client page
 Controllers.cleanInputs = function(){
     $("input[type='checkbox']").each(function(){
