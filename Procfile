@@ -1,1 +1,1 @@
-web: with_jmap java $JAVA_OPTS -Xmx350M  -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps -Dserver.port=$PORT -jar target/LibraryOnline_1.0.war
+web: java -Xmx350M  -Dserver.port=$PORT -jar target/LibraryOnline_1.0.war
