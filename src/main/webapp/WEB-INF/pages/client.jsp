@@ -4,7 +4,7 @@
 <html>
 <head>
 	<title>client</title>
-	<link rel="stylesheet" href="weblib/css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="weblib/css/client.css" type="text/css"/>
 
     <jsp:include page="headInclude.jsp"/>
     <script src="weblib/js/Controllers.js"></script>
