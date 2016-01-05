@@ -47,7 +47,7 @@ Controllers.Client.printBooks = function(books){
     	        "<img alt='Embedded Image' src='data:image/jpg;base64," +
     	        book.title + "'/>" +
             "</div>" +
-            "<div class = 'col-sm-6'>" +
+            "<div class = 'col-sm-7'>" +
                 "<h3>" +
                     "<a href='" + Controllers.Client.booksUrl + "/" + book.id + "'>" +
                     book.name + "</a>" +

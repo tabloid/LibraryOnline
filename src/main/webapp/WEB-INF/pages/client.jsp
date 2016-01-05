@@ -5,6 +5,7 @@
 <head>
 	<title>client</title>
 	<link rel="stylesheet" href="weblib/css/style.css" type="text/css"/>
+
     <jsp:include page="headInclude.jsp"/>
     <script src="weblib/js/Controllers.js"></script>
     <script src="weblib/js/Controllers.Client.js"></script>
@@ -13,10 +14,8 @@
 	<div class="container">
 		<div class="header">
         	<ul class="nav nav-pills pull-right">
-          		<li class="active">
-          			<a href="client">Home</a>
-          		</li>
-          		<li><a href="about">About</a></li>
+          		<li class="active"><a href="client">Home</a></li>
+          		<li><a href="#">About</a></li>
           		<li><a href="admin">Admin</a></li>
         	</ul>
         	<h3 class="text-muted">Online library project</h3>
@@ -73,7 +72,13 @@
 				</div>
 			</div>
 			<div id="books" class="col-sm-6 panel panel-default"></div>
-			<div id="sidebar" class="col-sm-3"></div>
+			<div id="sidebar" class="col-sm-3">
+				<div class="panel panel-default">
+					<div>
+						реклама
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
