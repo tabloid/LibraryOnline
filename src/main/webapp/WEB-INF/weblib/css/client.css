@@ -19,11 +19,6 @@
     padding-bottom : 5px;
 }
 
-/*выравнивание названия книги */
-#books  h3 {
-    margin-top : 0px;
-}
-
 /*выравнивание заголовка */
 .header > h3 {
     margin-bottom : 15px;

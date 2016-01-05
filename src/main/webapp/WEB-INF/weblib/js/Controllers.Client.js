@@ -48,10 +48,10 @@ Controllers.Client.printBooks = function(books){
     	        book.title + "'/>" +
             "</div>" +
             "<div class = 'col-sm-7'>" +
-                "<h3>" +
+                "<h4>" +
                     "<a href='" + Controllers.Client.booksUrl + "/" + book.id + "'>" +
                     book.name + "</a>" +
-                "</h3>" +
+                "</h4>" +
                 "<div class='row'>" +
                     "<div class='col-sm-4'>" +
                         "Автор" +
