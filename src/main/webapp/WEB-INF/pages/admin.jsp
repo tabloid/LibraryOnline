@@ -5,23 +5,10 @@
 <head>
 
 <title>admin</title>
+<link rel="stylesheet" href="weblib/css/admin.css" type="text/css"/>
 <jsp:include page="headInclude.jsp"/>
 <script src="weblib/js/Controllers.js"></script>
 <script src="weblib/js/Controllers.Admin.js"></script>
-
-<style>
-
-/*выравнивание заголовка */
-.header > h3 {
-    margin-bottom : 15px;
-}
-
-/*ширина поля ввода жанра */
-#send  input[type="text"]{
-	width : 70%;
-}
-
-</style>
 
 </head>
 <body onload="Controllers.Admin.getFeatures(); Controllers.cleanInputs()">
@@ -56,7 +43,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<iframe width=100% height=100% name="iframe" frameborder="no"></iframe>
+			<iframe width=100% height=100% name="iframe" frameborder="no" onload="Controllers.Admin.getFeatures()"></iframe>
 		</div>
 	</div>
 </body>

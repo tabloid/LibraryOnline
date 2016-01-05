@@ -1,0 +1,10 @@
+/*выравнивание заголовка */
+.header > h3 {
+    margin-bottom : 15px;
+}
+
+/*ширина поля ввода жанра */
+#send  input[type="text"]{
+	width : 70%;
+}
+
