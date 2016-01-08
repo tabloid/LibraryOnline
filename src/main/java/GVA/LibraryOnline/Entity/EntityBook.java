@@ -22,7 +22,6 @@ public class EntityBook {
     @Column(name = "year")
     private String year;
     @Column(name = "extention")
-    @JsonIgnore
     private String extention;
     @OneToOne(cascade = CascadeType.ALL)
     private EntityFeature entityFeature;

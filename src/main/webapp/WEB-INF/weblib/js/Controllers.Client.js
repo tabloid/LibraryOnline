@@ -62,7 +62,7 @@ Controllers.Client.printBooks = function(books){
                 "</div>" +
                 "<div class='row'>" +
                     "<div class='col-sm-4'>" +
-                        "<p>Жанр</p>" +
+                        "Жанр" +
                     "</div>" +
                     "<div class='col-sm-8'>" +
                         book.feature +
@@ -70,10 +70,18 @@ Controllers.Client.printBooks = function(books){
                 "</div>" +
                 "<div class='row'>" +
                     "<div class='col-sm-4'>" +
-                        "<p>Год</p>" +
+                        "Год" +
                     "</div>" +
                     "<div class='col-sm-8'>" +
                         book.year +
+                    "</div>" +
+                "</div>" +
+                "<div class='row'>" +
+                    "<div class='col-sm-4'>" +
+                        "Формат" +
+                    "</div>" +
+                    "<div class='col-sm-8'>" +
+                        book.extention +
                     "</div>" +
                 "</div>" +
             "</div>" +
