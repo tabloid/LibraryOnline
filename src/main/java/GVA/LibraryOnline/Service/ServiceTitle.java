@@ -8,6 +8,7 @@ import com.lowagie.text.pdf.PdfWriter;
 import com.lowagie.text.pdf.RandomAccessFileOrArray;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
@@ -24,6 +25,8 @@ import java.io.InputStream;
 
 @Service
 public class ServiceTitle {
+    @Autowired
+    ServiceCloudConvert serviceCloudConvert;
 
     private byte[] getPdfPageFromBook(InputStream input) throws IOException, DocumentException {
         Document document = new Document(PageSize.A4, 0, 0, 0, 0);
@@ -60,6 +63,8 @@ public class ServiceTitle {
     public byte[] getFirstPage(InputStream input, String extention) throws IOException, DocumentException {
         if (extention.equals("pdf"))
             return getJPGPageFromPdfPage(getPdfPageFromBook(input));
+        else if (extention.equals("djvu"))
+            return getJPGPageFromPdfPage(serviceCloudConvert.getPdfFromDjvu(input));
         else return null;
     }
 
