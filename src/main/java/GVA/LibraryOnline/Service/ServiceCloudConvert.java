@@ -1,14 +1,11 @@
 package GVA.LibraryOnline.Service;
 
+import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Map;
 
 /**
  * Created by Vsevolod on 08.01.2016.
@@ -22,7 +19,18 @@ public class ServiceCloudConvert {
     String boundary = "---" + System.currentTimeMillis();
     String lineFeed = "\r\n";
 
-    private String postRequest(InputStream inputStream) throws IOException {
+    private InputStream downloadPdfBook(String urlString) throws IOException {
+        URL url = new URL(urlString);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        connection.connect();
+        InputStream inputStream = connection.getInputStream();
+        byte[] convertedData = new byte[inputStream.available()];
+        inputStream.read(convertedData);
+        return inputStream;
+    }
+
+    private String sendBookForProcessing(InputStream inputStream) throws IOException {
         String input = "upload";
         String filename = "djvu.djvu";
         String download = "false";
@@ -55,16 +63,17 @@ public class ServiceCloudConvert {
         outputStream.flush();
         outputStream.close();
 
-        connection.getHeaderFields();
-
         InputStream is = connection.getInputStream();
-        BufferedInputStream bufferedInputStream = new BufferedInputStream(is);
-        byte[] responseBytes = new byte[bufferedInputStream.available()];
-        bufferedInputStream.read(responseBytes);
-
-        System.out.println(new String(responseBytes));
-
-        return data.toString();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(is));
+        StringBuffer buffer = new StringBuffer();
+        String str;
+        while ((str = bufferedReader.readLine()) != null)
+            buffer.append(str);
+        JSONObject jsonObject = new JSONObject(buffer.toString());
+        JSONObject output = (JSONObject) jsonObject.get("output");
+        String response = "https:" + output.getString("url");
+        bufferedReader.close();
+        return response;
     }
 
     private void sendParameter(OutputStream outputStream, String name, String value) throws IOException {
@@ -95,8 +104,8 @@ public class ServiceCloudConvert {
         outputStream.write(buffer.toString().getBytes());
     }
 
-    public byte[] getPdfFromDjvu(InputStream inputStream) throws IOException {
-        return postRequest(inputStream).getBytes();
+    public InputStream convertDjvuToPdfBook(InputStream inputStream) throws IOException {
+        return downloadPdfBook(sendBookForProcessing(inputStream));
     }
 
 

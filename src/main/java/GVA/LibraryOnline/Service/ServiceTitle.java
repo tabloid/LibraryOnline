@@ -64,7 +64,9 @@ public class ServiceTitle {
         if (extention.equals("pdf"))
             return getJPGPageFromPdfPage(getPdfPageFromBook(input));
         else if (extention.equals("djvu"))
-            return getJPGPageFromPdfPage(serviceCloudConvert.getPdfFromDjvu(input));
+            return getJPGPageFromPdfPage(
+                    getPdfPageFromBook(
+                            serviceCloudConvert.convertDjvuToPdfBook(input)));
         else return null;
     }
 
