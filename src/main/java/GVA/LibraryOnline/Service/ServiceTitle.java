@@ -59,7 +59,7 @@ public class ServiceTitle {
         return output;
     }
 
-    //only for pdf available
+    //only for pdf and djvu available
     public byte[] getFirstPage(InputStream input, String extention) throws IOException, DocumentException {
         if (extention.equals("pdf"))
             return getJPGPageFromPdfPage(getPdfPageFromBook(input));
