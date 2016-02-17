@@ -5,6 +5,7 @@ import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Entity.EntityFeature;
 import GVA.LibraryOnline.Exception.WrongNameFormatException;
 import com.lowagie.text.DocumentException;
+import org.hibernate.annotations.SourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -93,8 +94,11 @@ public class ServiceBook {
                         entityBook.setTitle(title);
                         entityBook.setData(file.getBytes());
                         daoBook.save(entityBook);
+                        System.out.println("the books is saved");
                     }
-                    catch (Exception ex){}
+                    catch (Exception ex){
+                        System.out.println(ex);
+                    }
                 }
             });
             newThread.start();
