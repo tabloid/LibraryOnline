@@ -85,11 +85,11 @@ public class ServiceBook {
             entityBook.setAuthor(author);
             entityBook.setYear(year);
             entityBook.setExtention(extention);
-            InputStream inputStream = file.getInputStream();
             Thread newThread = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
+                        InputStream inputStream = file.getInputStream();
                         byte[] title = serviceTitle.getFirstPage(inputStream, extention);
                         entityBook.setTitle(title);
                         entityBook.setData(file.getBytes());
@@ -102,6 +102,12 @@ public class ServiceBook {
                 }
             });
             newThread.start();
+            try {
+                Thread.sleep(1000);
+            }
+            catch (InterruptedException ex){
+                System.out.println(ex);
+            }
         } else throw new WrongNameFormatException();
     }
 
