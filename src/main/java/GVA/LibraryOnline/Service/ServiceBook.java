@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.concurrent.ThreadFactory;
 
 /**
  * Created by V.Herasymenko on 13.10.2015.
@@ -84,10 +85,19 @@ public class ServiceBook {
             entityBook.setYear(year);
             entityBook.setExtention(extention);
             InputStream inputStream = file.getInputStream();
-            byte[] title = serviceTitle.getFirstPage(inputStream, extention);
-            entityBook.setTitle(title);
-            entityBook.setData(file.getBytes());
-            daoBook.save(entityBook);
+            Thread newThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        byte[] title = serviceTitle.getFirstPage(inputStream, extention);
+                        entityBook.setTitle(title);
+                        entityBook.setData(file.getBytes());
+                        daoBook.save(entityBook);
+                    }
+                    catch (Exception ex){}
+                }
+            });
+            newThread.start();
         } else throw new WrongNameFormatException();
     }
 

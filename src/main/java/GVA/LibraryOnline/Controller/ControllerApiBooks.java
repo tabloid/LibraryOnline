@@ -63,7 +63,7 @@ public class ControllerApiBooks {
         for (MultipartFile file : files) {
             if (!file.isEmpty()) {
                 serviceBook.addNewBook(feature, file);
-                log += file.getOriginalFilename() + " uploaded\r\n";
+                log += file.getOriginalFilename() + " is processing \\r\\n";
             }
         }
         return log;
