@@ -17,15 +17,8 @@ Controllers.Client.getBooksByFeature = function(obj, urlString){
     ulBox.find("li").each(function(){
         $(this).removeClass("active");
     });
-	$.ajax({
-		type : 'get',
-        url : urlString,
-        dataType : "json",
-        success : function(){
-        		Controllers.Client.getBooksByQuery(urlString);
-        		$(obj).parent().addClass("active");
-            }
-        });
+    Controllers.Client.getBooksByQuery(urlString);
+    $(obj).parent().addClass("active");
 }
 Controllers.Client.getBooksByQuery = function(urlString){
 	$.ajax({
