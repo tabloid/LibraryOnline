@@ -46,4 +46,11 @@ public class DaoFeature {
     public void save(EntityFeature entityFeature) {
         entityManager.persist(entityFeature);
     }
+
+    public void remove(int id){
+        String queryStr = "delete from EntityFeature EF where id = :id";
+        Query query = entityManager.createQuery(queryStr);
+        query.setParameter("id", id);
+        query.executeUpdate();
+    }
 }

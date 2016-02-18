@@ -1,6 +1,7 @@
 package GVA.LibraryOnline.Service;
 
 import GVA.LibraryOnline.Dao.DaoBook;
+import GVA.LibraryOnline.Dao.DaoFeature;
 import GVA.LibraryOnline.Entity.BookInfo;
 import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Entity.EntityFeature;

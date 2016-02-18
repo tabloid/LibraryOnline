@@ -2,6 +2,7 @@ package GVA.LibraryOnline.Dao;
 
 import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Entity.EntityFeature;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -16,6 +17,9 @@ import java.util.List;
 @Repository
 @Transactional
 public class DaoBook {
+
+    @Autowired
+    DaoFeature daoFeature;
 
     @PersistenceContext
     protected EntityManager entityManager;
@@ -52,11 +56,23 @@ public class DaoBook {
     }
 
     public void removeBookById(int bookId) {
-
-        String queryStr = "delete from EntityBook book where book.id = :id";
+        String queryStr = "select book.entityFeature from EntityBook book where book.id = :id";
         Query query = entityManager.createQuery(queryStr);
+        query.setParameter("id", bookId);
+        EntityFeature entityFeature = (EntityFeature) query.getSingleResult();
+        int featureId = entityFeature.getId();
+
+        queryStr = "delete from EntityBook book where book.id = :id";
+        query = entityManager.createQuery(queryStr);
         query.setParameter("id", bookId);
         query.executeUpdate();
 
+        queryStr = "select count(*) from EntityBook book where book.entityFeature.id = :featureId";
+        query = entityManager.createQuery(queryStr);
+        query.setParameter("featureId", featureId);
+        Long count = (Long) query.getSingleResult();
+
+        if (count == 0)
+            daoFeature.remove(featureId);
     }
 }
