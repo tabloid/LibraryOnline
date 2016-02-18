@@ -42,9 +42,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" style="height:500px">
 			<iframe width=100% height=100% name="iframe" frameborder="no" onload="Controllers.Admin.getFeatures()"></iframe>
-		</div>
 	</div>
 </body>
 </html>
