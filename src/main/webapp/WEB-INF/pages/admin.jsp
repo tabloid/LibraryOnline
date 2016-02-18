@@ -30,7 +30,7 @@
 							<p>Введите жанр книг (или выберите из списка):</p>
 							<p><input type="text" name="feature"></p>
 							<p><input type="file" name="file" multiple="true" ></p>
-							<p><input type="button" onclick="Controllers.Admin.sendBooks()" value="Upload"></p>
+							<p><input type="button" onclick="Controllers.Admin.sendBooks()" value="Upload" class="btn btn-default"></p>
 						</form>
 					</div>
 				</div>

@@ -66,7 +66,7 @@
                     		</div>
                     	</div>
                     	<div class="panel-body">
-                        	<input type="button" onclick="Controllers.Client.searchController()" value="искать">
+                        	<input type="button" onclick="Controllers.Client.searchController()" value="искать" class="btn btn-default">
                         </div>
                 	</form>
 				</div>
