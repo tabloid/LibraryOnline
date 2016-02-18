@@ -1,11 +1,11 @@
 package GVA.LibraryOnline.Service;
 
 import GVA.LibraryOnline.Dao.DaoBook;
+import GVA.LibraryOnline.Entity.BookInfo;
 import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Entity.EntityFeature;
 import GVA.LibraryOnline.Exception.WrongNameFormatException;
 import com.lowagie.text.DocumentException;
-import org.hibernate.annotations.SourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -13,7 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-import java.util.concurrent.ThreadFactory;
 
 /**
  * Created by V.Herasymenko on 13.10.2015.
@@ -26,6 +25,8 @@ public class ServiceBook {
     ServiceTitle serviceTitle;
     @Autowired
     ServiceFeature serviceFeature;
+    @Autowired
+    ServiceInfo serviceInfo;
 
     public List<EntityBook> getAllBooks() {
         return daoBook.getAllBooks();
@@ -57,54 +58,32 @@ public class ServiceBook {
 
     public void addNewBook(String feature, MultipartFile file)
             throws WrongNameFormatException, DocumentException, IOException {
-        String fileName = file.getOriginalFilename();
-        String extention = fileName.substring(fileName.lastIndexOf(".") + 1);
-        String fileNameWithoutExtention = fileName.substring(0, fileName.lastIndexOf("."));
-        //split by dot symbol
-        String[] array = fileNameWithoutExtention.split("\\.");
-        int len = array.length;
-        if (len >= 3) {
-            //first element is author name
-            String author = array[0].trim();
-            //last element is year
-            String year = array[len - 1].trim();
-            //everything between first and last element is name value
-            //this is for book names that consist of several sentences divided by dot
-            String name = "";
-            if (len > 3) {
-                for (int i = 1; i <= len - 2; i++)
-                    name += array[i] + ". ";
-                name = name.substring(0, name.lastIndexOf("."));
-            } else
-                name = array[1].trim();
-
-            EntityBook entityBook = new EntityBook();
-            EntityFeature entityFeature = serviceFeature.getEntityFeature(feature);
-            entityBook.setFeature(entityFeature);
-            entityBook.setName(name);
-            entityBook.setAuthor(author);
-            entityBook.setYear(year);
-            entityBook.setExtention(extention);
-            entityBook.setData(file.getBytes());
-            daoBook.save(entityBook);
-            Thread newThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        System.out.println("Start title processing for bookId: " + entityBook.getId());
-                        InputStream inputStream = file.getInputStream();
-                        byte[] title = serviceTitle.getFirstPage(inputStream, extention);
-                        entityBook.setTitle(title);
-                        daoBook.update(entityBook);
-                        System.out.println("Finish title processing for bookId: " + entityBook.getId());
-                    }
-                    catch (Exception ex){
-                        System.out.println(ex);
-                    }
+        BookInfo bookInfo = serviceInfo.getBookInfoFromFileName(file);
+        EntityBook entityBook = new EntityBook();
+        EntityFeature entityFeature = serviceFeature.getEntityFeature(feature);
+        entityBook.setFeature(entityFeature);
+        entityBook.setName(bookInfo.getName());
+        entityBook.setAuthor(bookInfo.getAuthor());
+        entityBook.setYear(bookInfo.getYear());
+        entityBook.setExtention(bookInfo.getExtention());
+        entityBook.setData(file.getBytes());
+        daoBook.save(entityBook);
+        Thread newThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    System.out.println("Start title processing for bookId: " + entityBook.getId());
+                    InputStream inputStream = file.getInputStream();
+                    byte[] title = serviceTitle.getFirstPage(inputStream, entityBook.getExtention());
+                    entityBook.setTitle(title);
+                    daoBook.update(entityBook);
+                    System.out.println("Finish title processing for bookId: " + entityBook.getId());
+                } catch (Exception ex) {
+                    System.out.println(ex);
                 }
-            });
-            newThread.start();
-        } else throw new WrongNameFormatException();
+            }
+        });
+        newThread.start();
     }
 
     public void removeAllBooks() {
