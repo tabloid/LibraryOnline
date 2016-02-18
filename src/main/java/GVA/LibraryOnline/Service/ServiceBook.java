@@ -77,12 +77,19 @@ public class ServiceBook {
                     byte[] title = serviceTitle.getFirstPage(inputStream, entityBook.getExtention());
                     daoBook.updateTitle(entityBook.getId(), title);
                     System.out.println("Finish title processing for bookId: " + entityBook.getId());
-                } catch (Exception ex) {
+                } catch (IOException ex) {
+                    System.out.println(ex);
+                } catch (DocumentException ex) {
                     System.out.println(ex);
                 }
             }
         });
         newThread.start();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            System.out.println(ex);
+        }
     }
 
     public void removeAllBooks() {
