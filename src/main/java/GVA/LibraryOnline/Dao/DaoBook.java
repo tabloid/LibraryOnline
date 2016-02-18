@@ -41,8 +41,13 @@ public class DaoBook {
         entityManager.persist(entityBook);
     }
 
-    public void update(EntityBook entityBook){
-        entityManager.merge(entityBook);
+    public void updateTitle(int bookId, byte[] bookTittle){
+        String queryStr = "update EntityBook set title = :title where id = :id";
+        Query query = entityManager.createQuery(queryStr);
+        query.setParameter("title", bookTittle);
+        query.setParameter("id", bookId);
+        query.executeUpdate();
+
     }
 
     public void remove() {

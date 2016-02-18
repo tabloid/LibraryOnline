@@ -75,8 +75,7 @@ public class ServiceBook {
                     System.out.println("Start title processing for bookId: " + entityBook.getId());
                     InputStream inputStream = file.getInputStream();
                     byte[] title = serviceTitle.getFirstPage(inputStream, entityBook.getExtention());
-                    entityBook.setTitle(title);
-                    daoBook.update(entityBook);
+                    daoBook.updateTitle(entityBook.getId(), title);
                     System.out.println("Finish title processing for bookId: " + entityBook.getId());
                 } catch (Exception ex) {
                     System.out.println(ex);
