@@ -24,3 +24,13 @@
     margin-bottom : 15px;
 }
 
+body {
+    background-color: #1D1E21 !important;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+    margin-top: 3.42857rem;
+}
+
