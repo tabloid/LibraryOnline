@@ -85,16 +85,18 @@ public class ServiceBook {
             entityBook.setAuthor(author);
             entityBook.setYear(year);
             entityBook.setExtention(extention);
+            entityBook.setData(file.getBytes());
+            daoBook.save(entityBook);
             Thread newThread = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
+                        System.out.println("Start title processing for bookId: " + entityBook.getId());
                         InputStream inputStream = file.getInputStream();
                         byte[] title = serviceTitle.getFirstPage(inputStream, extention);
                         entityBook.setTitle(title);
-                        entityBook.setData(file.getBytes());
-                        daoBook.save(entityBook);
-                        System.out.println("the books is saved");
+                        daoBook.update(entityBook);
+                        System.out.println("Finish title processing for bookId: " + entityBook.getId());
                     }
                     catch (Exception ex){
                         System.out.println(ex);
@@ -102,12 +104,6 @@ public class ServiceBook {
                 }
             });
             newThread.start();
-            try {
-                Thread.sleep(1000);
-            }
-            catch (InterruptedException ex){
-                System.out.println(ex);
-            }
         } else throw new WrongNameFormatException();
     }
 

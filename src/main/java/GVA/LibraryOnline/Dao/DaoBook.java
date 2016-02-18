@@ -41,6 +41,10 @@ public class DaoBook {
         entityManager.persist(entityBook);
     }
 
+    public void update(EntityBook entityBook){
+        entityManager.merge(entityBook);
+    }
+
     public void remove() {
         String query = "delete from EntityBook books";
         entityManager.createQuery(query).executeUpdate();
