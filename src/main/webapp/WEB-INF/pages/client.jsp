@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>client</title>
+	<title>Online Library</title>
 	<link rel="stylesheet" href="weblib/css/client.css" type="text/css"/>
 
     <jsp:include page="headInclude.jsp"/>
