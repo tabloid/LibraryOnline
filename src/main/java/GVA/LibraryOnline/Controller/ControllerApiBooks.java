@@ -75,10 +75,10 @@ public class ControllerApiBooks {
         return serviceFeature.getAllEntityFeatures();
     }
 
-    @RequestMapping(value = "/remove", method = RequestMethod.GET)
-    public String removeAllBooks() {
-        serviceBook.removeAllBooks();
-        return "books removed";
+    @RequestMapping(value = "/books/remove/{id}", method = RequestMethod.GET)
+    public String removeBook(@PathVariable int id) {
+        serviceBook.removeBook(id);
+        return "bookId " + id + "  is removed";
     }
 
 }

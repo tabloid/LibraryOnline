@@ -92,7 +92,7 @@ public class ServiceBook {
         }
     }
 
-    public void removeAllBooks() {
-        daoBook.remove();
+    public void removeBook(int id) {
+        daoBook.removeBookById(id);
     }
 }
