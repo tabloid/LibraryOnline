@@ -32,7 +32,9 @@ Controllers.Client.getBooksByQuery = function(urlString){
 }
 Controllers.Client.printBooks = function(books){
     $(Controllers.Client.booksId).empty();
-	for (i = 0; i < books.length; i++){
+    var downloads = 0;
+    var total = books.length;
+	for (i = 0; i < total; i++){
 		var book = books[i];
     	var string =
     	"<div class = 'row'>" +
@@ -80,7 +82,11 @@ Controllers.Client.printBooks = function(books){
             "</div>" +
         "</div>";
     	$(Controllers.Client.booksId).append(string);
+    	downloads = downloads + book.downloads;
 	}
+	var str = "<p>Загружено " + total + " книг</p>" +
+	"<p>Скачано " + downloads + " книг</p>";
+	$("#statistics").html(str);
 }
 //features
 Controllers.Client.featuresId = "#features";

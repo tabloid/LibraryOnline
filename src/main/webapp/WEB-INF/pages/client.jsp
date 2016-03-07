@@ -72,7 +72,11 @@
 				</div>
 			</div>
 			<div id="books" class="col-sm-6 panel panel-default"></div>
-			<div id="sidebar" class="col-sm-3">
+			<div class="col-sm-3">
+				<div class="panel panel-default">
+				    <div class='panel-heading'>Статистика</div>
+				    <div id="statistics" class="panel-body"></div>
+				</div>
 				<div class="panel panel-default">
 					<div>
 						реклама
