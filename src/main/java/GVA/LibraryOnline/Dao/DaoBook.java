@@ -26,7 +26,7 @@ public class DaoBook {
 
     public List<EntityBook> getAllBooks(){
         String queryStr = "select new EntityBook(t.id, t.entityFeature, t.name, t.author, " +
-                "t.year, t.extention, t.title) from EntityBook t";
+                "t.year, t.extention, t.title, t.downloads) from EntityBook t";
         Query query = entityManager.createQuery(queryStr);
         List<EntityBook> list = query.getResultList();
         return list;

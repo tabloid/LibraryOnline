@@ -31,10 +31,10 @@ public class EntityBook {
     @JsonIgnore
     private byte[] data;
     @Column(name = "downloads")
-    private int downloads = 0;
+    private int downloads;
 
     public EntityBook(int id, EntityFeature feature, String name,
-                      String author, String year, String extention, byte[] title) {
+                      String author, String year, String extention, byte[] title, int downloads) {
         this.id = id;
         this.entityFeature = feature;
         this.name = name;
@@ -42,6 +42,7 @@ public class EntityBook {
         this.year = year;
         this.extention = extention;
         this.title = title;
+        this.downloads = downloads;
     }
 
     public EntityBook() {

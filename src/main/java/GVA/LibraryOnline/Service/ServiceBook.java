@@ -36,13 +36,15 @@ public class ServiceBook {
     public EntityBook getBookById(int id) {
         EntityBook entityBook = daoBook.getBookById(id);
         int downloads = entityBook.getDownloads();
-        daoBook.updateDownloads(id, downloads + 1);
+        downloads++;
+        daoBook.updateDownloads(id, downloads);
+        System.out.println(downloads);
         return entityBook;
     }
 
     public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year) {
         String queryStr = "select new EntityBook(t.id, t.entityFeature, t.name, t.author, " +
-                "t.year, t.extention, t.title) from EntityBook t where ";
+                "t.year, t.extention, t.title, t.downloads) from EntityBook t where ";
         StringBuilder query = new StringBuilder(queryStr);
         if (feature != null) {
             query.append("LOWER(t.entityFeature.feature) like '%").append(feature.toLowerCase()).append("%' and ");
@@ -71,6 +73,7 @@ public class ServiceBook {
         entityBook.setYear(bookInfo.getYear());
         entityBook.setExtention(bookInfo.getExtention());
         entityBook.setData(file.getBytes());
+        entityBook.setDownloads(0);
         daoBook.save(entityBook);
         Thread newThread = new Thread(new Runnable() {
             @Override
