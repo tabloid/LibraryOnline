@@ -21,7 +21,7 @@ Controllers.Admin.sendBooks = function(){
     var feature = $(Controllers.Admin.sendId).serialize();
     var index = feature.indexOf("=");
     feature = feature.substr(index + 1);
-    var url = "../api/books/" + feature + "/new";
+    var url = "../api/books/" + feature;
     $(Controllers.Admin.sendId).attr("action", url);
     $(Controllers.Admin.sendId).submit();
 }

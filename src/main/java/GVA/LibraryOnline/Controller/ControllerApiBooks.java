@@ -56,7 +56,7 @@ public class ControllerApiBooks {
         }
     }
 
-    @RequestMapping(value = "/books/{feature}/new", method = RequestMethod.POST)
+    @RequestMapping(value = "/books/{feature}", method = RequestMethod.POST)
     public String addNewBook(@PathVariable String feature, @RequestParam("file") MultipartFile[] files)
             throws IOException, WrongNameFormatException, DocumentException {
         String log = "";
