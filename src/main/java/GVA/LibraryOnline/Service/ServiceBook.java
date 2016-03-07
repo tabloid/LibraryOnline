@@ -34,7 +34,10 @@ public class ServiceBook {
     }
 
     public EntityBook getBookById(int id) {
-        return daoBook.getBookById(id);
+        EntityBook entityBook = daoBook.getBookById(id);
+        int downloads = entityBook.getDownloads();
+        daoBook.updateDownloads(id, downloads + 1);
+        return entityBook;
     }
 
     public List<EntityBook> getBooksByCriteria(String feature, String name, String author, String year) {

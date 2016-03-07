@@ -55,6 +55,14 @@ public class DaoBook {
 
     }
 
+    public void updateDownloads(int bookId, int  downloads){
+        String queryStr = "update EntityBook set downloads = :downloads where id = :id";
+        Query query = entityManager.createQuery(queryStr);
+        query.setParameter("downloads", downloads);
+        query.setParameter("id", bookId);
+        query.executeUpdate();
+    }
+
     public void removeBookById(int bookId) {
         String queryStr = "select book.entityFeature from EntityBook book where book.id = :id";
         Query query = entityManager.createQuery(queryStr);
