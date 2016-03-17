@@ -17,4 +17,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="weblib/bootstrap/bootstrap.min.js"></script>
 
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="http://vk.com/js/api/share.js?93" charset="windows-1251"></script>
 

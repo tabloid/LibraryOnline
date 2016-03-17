@@ -79,7 +79,10 @@
 				</div>
 				<div class="panel panel-default">
 					<div>
-						реклама
+						<!-- Put this script tag to the place, where the Share button will be -->
+                        <script type="text/javascript"><!--
+                        document.write(VK.Share.button(false,{type: "link", text: "Сохранить"}));
+                        --></script>
 					</div>
 				</div>
 			</div>
