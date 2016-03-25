@@ -20,6 +20,18 @@
             <h3 class="text-muted">Online library project</h3>
         </div>
 		<div class="row">
+		    <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class='panel-body'>
+                        <p>
+                            Данный ресурс задумывался в качестве репозитория технической литературы, где все жилающие могут бесплатно получить необходимые книги, а также в качестве учебного проекта автора.
+                        </p>
+                        <p>
+                            По всем вопросам обращайтесь по почте sysmet@meta.ua
+                        </p>
+                    </div>
+                </div>
+            </div>
 		</div>
 	</div>
 </body>
