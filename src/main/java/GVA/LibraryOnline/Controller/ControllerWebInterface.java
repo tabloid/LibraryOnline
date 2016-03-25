@@ -12,12 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "/web")
 public class ControllerWebInterface {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView getIndex() {
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:/web/client");
-        return mav;
-    }
 
     @RequestMapping(value = "/client", method = RequestMethod.GET)
     public ModelAndView getClient() {
