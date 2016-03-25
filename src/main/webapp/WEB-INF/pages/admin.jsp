@@ -13,14 +13,14 @@
 </head>
 <body onload="Controllers.Admin.getFeatures(); Controllers.cleanInputs()">
 	<div class="container">
-		<div class="header">
-        	<ul class="nav nav-pills pull-right">
-          		<li><a href="client">Home</a></li>
-          		<li><a href="#">About</a></li>
-          		<li class="active"><a href="admin">Admin</a></li>
-        	</ul>
-        	<h3 class="text-muted">Online library project</h3>
-		</div>
+	    <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li><a href="client">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li class="active"><a href="admin">Admin</a></li>
+            </ul>
+            <h3 class="text-muted">Online library project</h3>
+        </div>
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="panel panel-default">
@@ -44,6 +44,7 @@
 		</div>
 		<div class="row" style="height:500px">
 			<iframe width=100% height=100% name="iframe" frameborder="no" onload="Controllers.Admin.getFeatures()"></iframe>
+		</div>
 	</div>
 </body>
 </html>

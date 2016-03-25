@@ -12,14 +12,14 @@
 </head>
 <body onload="Controllers.Client.getBooks(); Controllers.Client.getFeatures(); Controllers.cleanInputs()">
 	<div class="container">
-		<div class="header">
-        	<ul class="nav nav-pills pull-right">
-          		<li class="active"><a href="client">Home</a></li>
-          		<li><a href="#">About</a></li>
-          		<li><a href="admin">Admin</a></li>
-        	</ul>
-        	<h3 class="text-muted">Online library project</h3>
-		</div>
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="client">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="admin">Admin</a></li>
+            </ul>
+            <h3 class="text-muted">Online library project</h3>
+        </div>
 		<div class="row">
 			<div class="col-sm-3">
 				<div id="features" class="panel panel-default">
