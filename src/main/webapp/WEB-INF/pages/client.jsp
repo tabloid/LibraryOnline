@@ -81,7 +81,7 @@
 					<div>
 						<!-- Put this script tag to the place, where the Share button will be -->
                         <script type="text/javascript"><!--
-                        document.write(VK.Share.button(false,{type: "link", text: "Сохранить"}));
+                        document.write(VK.Share.button(false,{type: "link", text: "Поделиться ссылкой"}));
                         --></script>
 					</div>
 				</div>
