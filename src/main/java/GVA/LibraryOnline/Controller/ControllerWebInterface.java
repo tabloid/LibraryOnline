@@ -12,6 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "/web")
 public class ControllerWebInterface {
 
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView getIndex() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:/web/client");
+        return mav;
+    }
+
     @RequestMapping(value = "/client", method = RequestMethod.GET)
     public ModelAndView getClient() {
         ModelAndView mav = new ModelAndView();
@@ -23,6 +30,13 @@ public class ControllerWebInterface {
     public ModelAndView getAdmin() {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("admin");
+        return mav;
+    }
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public ModelAndView getAbout() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("about");
         return mav;
     }
 }
