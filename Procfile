@@ -1,1 +1,1 @@
-web: java -Xmx500M  -Dserver.port=$PORT -jar target/LibraryOnline_1.0.war
+web: java -Xmx800M  -Dserver.port=$PORT -jar target/LibraryOnline_1.0.war
