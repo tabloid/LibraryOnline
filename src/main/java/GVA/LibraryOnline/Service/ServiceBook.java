@@ -1,7 +1,6 @@
 package GVA.LibraryOnline.Service;
 
 import GVA.LibraryOnline.Dao.DaoBook;
-import GVA.LibraryOnline.Dao.DaoFeature;
 import GVA.LibraryOnline.Entity.BookInfo;
 import GVA.LibraryOnline.Entity.EntityBook;
 import GVA.LibraryOnline.Entity.EntityFeature;
@@ -14,20 +13,23 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created by V.Herasymenko on 13.10.2015.
  */
 @Service
 public class ServiceBook {
+    private static final Logger logger = Logger.getLogger(ServiceBook.class.getName());
+
     @Autowired
-    DaoBook daoBook;
+    private DaoBook daoBook;
     @Autowired
-    ServiceTitle serviceTitle;
+    private ServiceTitle serviceTitle;
     @Autowired
-    ServiceFeature serviceFeature;
+    private ServiceFeature serviceFeature;
     @Autowired
-    ServiceInfo serviceInfo;
+    private ServiceInfo serviceInfo;
 
     public List<EntityBook> getAllBooks() {
         return daoBook.getAllBooks();
@@ -38,7 +40,7 @@ public class ServiceBook {
         int downloads = entityBook.getDownloads();
         downloads++;
         daoBook.updateDownloads(id, downloads);
-        System.out.println(downloads);
+        logger.info("Updated number of downloads: " + downloads);
         return entityBook;
     }
 
@@ -63,7 +65,7 @@ public class ServiceBook {
     }
 
     public void addNewBook(String feature, MultipartFile file)
-            throws WrongNameFormatException, DocumentException, IOException {
+            throws WrongNameFormatException, IOException {
         BookInfo bookInfo = serviceInfo.getBookInfoFromFileName(file);
         EntityBook entityBook = new EntityBook();
         EntityFeature entityFeature = serviceFeature.getEntityFeature(feature);
@@ -79,15 +81,13 @@ public class ServiceBook {
             @Override
             public void run() {
                 try {
-                    System.out.println("Start title processing for bookId: " + entityBook.getId());
+                    logger.info("Start title processing for bookId: " + entityBook.getId());
                     InputStream inputStream = file.getInputStream();
                     byte[] title = serviceTitle.getFirstPage(inputStream, entityBook.getExtention());
                     daoBook.updateTitle(entityBook.getId(), title);
-                    System.out.println("Finish title processing for bookId: " + entityBook.getId());
-                } catch (IOException ex) {
-                    System.out.println(ex);
-                } catch (DocumentException ex) {
-                    System.out.println(ex);
+                    logger.info("Finish title processing for bookId: " + entityBook.getId());
+                } catch (IOException | DocumentException ex) {
+                    logger.severe(ex.getMessage());
                 }
             }
         });
@@ -95,7 +95,7 @@ public class ServiceBook {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException ex) {
-            System.out.println(ex);
+            logger.severe(ex.getMessage());
         }
     }
 
